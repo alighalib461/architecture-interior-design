@@ -1,0 +1,74 @@
+<svg viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- ======================================================================
+       ARCHITECTURE INTERIOR DESIGN — BRAND LOGO (WHITE TEXT / DARK BG VERSION)
+       Clean transparent negative space between all architectural linework
+       ====================================================================== -->
+  
+  <!-- Right Tower Vertical Architectural Slats (Transparent Background) -->
+  <g stroke="#E10600" stroke-width="2" stroke-linecap="round">
+    <path d="M260 40 L300 48 L300 150 L260 150 Z" stroke-width="2.5" fill="none"/>
+    <line x1="266" y1="42" x2="266" y2="150" />
+    <line x1="272" y1="43.5" x2="272" y2="150" />
+    <line x1="278" y1="45" x2="278" y2="150" />
+    <line x1="284" y1="46" x2="284" y2="150" />
+    <line x1="290" y1="47" x2="290" y2="150" />
+    <line x1="296" y1="47.5" x2="296" y2="150" />
+  </g>
+
+  <!-- Solid Red Cantilever Overhang (Thick L-Shaped Architectural Frame) -->
+  <path d="M80 32 L275 68 L275 96 L104 64 L104 120 L80 120 Z" fill="#E10600" />
+
+  <!-- Upper Balcony & Geometric Wall Modules (Clean Linework, Zero White Opaque Fill) -->
+  <g stroke="#E10600" stroke-width="2.5" fill="none">
+    <path d="M104 70 L260 98 L260 128 L104 100 Z" />
+    <line x1="165" y1="81" x2="165" y2="111" />
+    <line x1="215" y1="90" x2="215" y2="120" />
+    <path d="M104 84 L260 112" stroke-width="1.8" />
+  </g>
+
+  <!-- Left Ground Floor Vertical Architectural Slats -->
+  <g stroke="#E10600" stroke-width="2">
+    <path d="M80 120 L125 120 L125 175 L80 175 Z" stroke-width="2.5" fill="none"/>
+    <line x1="86" y1="120" x2="86" y2="175" />
+    <line x1="92" y1="120" x2="92" y2="175" />
+    <line x1="98" y1="120" x2="98" y2="175" />
+    <line x1="104" y1="120" x2="104" y2="175" />
+    <line x1="110" y1="120" x2="110" y2="175" />
+    <line x1="116" y1="120" x2="116" y2="175" />
+    <line x1="122" y1="120" x2="122" y2="175" />
+  </g>
+
+  <!-- Center Main Ground Box (Bold Red Window Facade with Architectural Chamfer) -->
+  <g>
+    <path d="M125 108 L280 118 L280 180 L125 178 Z" stroke="#E10600" stroke-width="4" fill="none" />
+    <rect x="135" y="118" width="40" height="52" fill="#E10600" rx="1" />
+    <rect x="180" y="121" width="42" height="50" fill="#E10600" rx="1" />
+    <rect x="227" y="124" width="42" height="48" fill="#E10600" rx="1" />
+  </g>
+
+  <!-- Ground Horizon Linework -->
+  <g stroke="#E10600" stroke-linecap="round">
+    <line x1="70" y1="188" x2="310" y2="188" stroke-width="3.5" />
+    <line x1="80" y1="194" x2="300" y2="194" stroke-width="2" />
+  </g>
+
+  <!-- Typography -->
+  <!-- Line 1: ARCHITECTURE (Letter-Spaced, White on Dark) -->
+  <text x="200" y="235" text-anchor="middle" font-family="'Plus Jakarta Sans', 'Manrope', -apple-system, sans-serif" font-size="20" font-weight="700" letter-spacing="8" fill="#FFFFFF">
+    ARCHITECTURE
+  </text>
+
+  <!-- Line 2: INTERIOR DESIGN (Bold Red) -->
+  <text x="200" y="270" text-anchor="middle" font-family="'Plus Jakarta Sans', 'Manrope', -apple-system, sans-serif" font-size="26" font-weight="800" letter-spacing="3" fill="#E10600">
+    INTERIOR DESIGN
+  </text>
+
+  <!-- Line 3: WHERE VISION MEETS REALITY (Slogan flanked by lines) -->
+  <g>
+    <line x1="60" y1="292" x2="100" y2="292" stroke="#E10600" stroke-width="1.5" />
+    <text x="200" y="296" text-anchor="middle" font-family="'Plus Jakarta Sans', 'Manrope', -apple-system, sans-serif" font-size="10.5" font-weight="600" letter-spacing="3.5" fill="#CCCCCC">
+      WHERE VISION MEETS REALITY
+    </text>
+    <line x1="300" y1="292" x2="340" y2="292" stroke="#E10600" stroke-width="1.5" />
+  </g>
+</svg>
