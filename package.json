@@ -5,7 +5,7 @@
   "description": "Architecture & Interior Design in Karachi",
   "scripts": {
     "start": "node server.js",
-    "build": "echo 'Build complete'"
+    "dev": "node server.js"
   },
   "keywords": [],
   "author": "Architecture Interior Design",
