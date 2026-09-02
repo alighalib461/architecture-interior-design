@@ -63,1135 +63,1751 @@
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-
-  <!-- ==========================================================================
-       HEADER & NAVIGATION
-       ========================================================================== -->
-  <header class="site-header" id="siteHeader">
-    <div class="container header-container">
-      
-      <!-- Brand Logo -->
-      <a href="#home" class="brand-logo" aria-label="Architecture Interior Design Home">
-        <!-- Crisp Architectural Vector SVG Logo (Zero White Artifacts, 100% Transparent Negative Space) -->
-        <svg class="logo-icon-svg" viewBox="0 0 240 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <!-- Right Tower Vertical Slats -->
-          <g stroke="#E10600" stroke-width="1.8" stroke-linecap="round">
-            <path d="M165 24 L195 30 L195 98 L165 98 Z" stroke-width="2" fill="none"/>
-            <line x1="171" y1="25.5" x2="171" y2="98" />
-            <line x1="177" y1="26.8" x2="177" y2="98" />
-            <line x1="183" y1="28" x2="183" y2="98" />
-            <line x1="189" y1="29" x2="189" y2="98" />
-          </g>
-          <!-- Top Cantilever Overhang (Solid Red) -->
-          <path d="M48 20 L175 44 L175 62 L64 41 L64 78 L48 78 Z" fill="#E10600" />
-          <!-- Balcony & Upper Level Modules (Clean Outlines, Transparent) -->
-          <g stroke="#E10600" stroke-width="1.8" fill="none">
-            <path d="M64 45 L166 64 L166 84 L64 66 Z" />
-            <line x1="104" y1="52.5" x2="104" y2="72.5" />
-            <line x1="136" y1="58.5" x2="136" y2="78.5" />
-            <path d="M64 54 L166 73" stroke-width="1.3" />
-          </g>
-          <!-- Left Ground Slats -->
-          <g stroke="#E10600" stroke-width="1.6">
-            <path d="M48 78 L78 78 L78 114 L48 114 Z" stroke-width="2" fill="none"/>
-            <line x1="53" y1="78" x2="53" y2="114" />
-            <line x1="58" y1="78" x2="58" y2="114" />
-            <line x1="63" y1="78" x2="63" y2="114" />
-            <line x1="68" y1="78" x2="68" y2="114" />
-            <line x1="73" y1="78" x2="73" y2="114" />
-          </g>
-          <!-- Center Main Ground Picture Box & 3 Solid Red Panes -->
-          <g>
-            <path d="M78 70 L180 77 L180 118 L78 116 Z" stroke="#E10600" stroke-width="2.8" fill="none" />
-            <rect x="85" y="77" width="26" height="34" fill="#E10600" rx="0.5" />
-            <rect x="115" y="79" width="28" height="33" fill="#E10600" rx="0.5" />
-            <rect x="147" y="81" width="27" height="31" fill="#E10600" rx="0.5" />
-          </g>
-          <!-- Ground Horizon Lines -->
-          <g stroke="#E10600" stroke-linecap="round">
-            <line x1="42" y1="124" x2="200" y2="124" stroke-width="2.2" />
-            <line x1="48" y1="128" x2="194" y2="128" stroke-width="1.3" />
-          </g>
-        </svg>
-
-        <div class="logo-text-group">
-          <span class="logo-title-arch">ARCHITECTURE</span>
-          <span class="logo-title-main">INTERIOR DESIGN</span>
-          <span class="logo-tagline">WHERE VISION MEETS REALITY</span>
-        </div>
-      </a>
-
-      <!-- Desktop Navigation Links -->
-      <nav class="nav-desktop" aria-label="Main Navigation">
-        <a href="#home" class="nav-link is-active">HOME</a>
-        <a href="#about" class="nav-link">ABOUT</a>
-        <a href="#services" class="nav-link">SERVICES</a>
-        <a href="#projects" class="nav-link">PROJECTS</a>
-        <a href="#process" class="nav-link">PROCESS</a>
-        <a href="#testimonials" class="nav-link">REVIEWS</a>
-        <a href="#contact" class="nav-link">CONTACT</a>
-      </nav>
-
-      <!-- Action Button -->
-      <div style="display: flex; align-items: center; gap: 1rem;">
-        <button class="btn btn-primary header-cta-btn js-open-estimate" aria-label="Start Your Project">
-          <span>Start Your Project</span>
-          <span class="btn-icon-arrow" aria-hidden="true">→</span>
-        </button>
-        
-        <!-- Mobile Menu Toggle -->
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-
-    </div>
-  </header>
-
-  <!-- Mobile Drawer & Backdrop -->
-  <div class="drawer-backdrop" id="drawerBackdrop"></div>
-  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Menu">
-    <div>
-      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 2.5rem;">
-        <svg style="width: 40px; height: 32px;" viewBox="0 0 240 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <g stroke="#E10600" stroke-width="1.8" stroke-linecap="round">
-            <path d="M165 24 L195 30 L195 98 L165 98 Z" stroke-width="2" fill="none"/>
-            <line x1="171" y1="25.5" x2="171" y2="98" />
-            <line x1="177" y1="26.8" x2="177" y2="98" />
-            <line x1="183" y1="28" x2="183" y2="98" />
-            <line x1="189" y1="29" x2="189" y2="98" />
-          </g>
-          <path d="M48 20 L175 44 L175 62 L64 41 L64 78 L48 78 Z" fill="#E10600" />
-          <g stroke="#E10600" stroke-width="1.8" fill="none">
-            <path d="M64 45 L166 64 L166 84 L64 66 Z" />
-            <line x1="104" y1="52.5" x2="104" y2="72.5" />
-            <line x1="136" y1="58.5" x2="136" y2="78.5" />
-            <path d="M64 54 L166 73" stroke-width="1.3" />
-          </g>
-          <g stroke="#E10600" stroke-width="1.6">
-            <path d="M48 78 L78 78 L78 114 L48 114 Z" stroke-width="2" fill="none"/>
-            <line x1="53" y1="78" x2="53" y2="114" />
-            <line x1="58" y1="78" x2="58" y2="114" />
-            <line x1="63" y1="78" x2="63" y2="114" />
-            <line x1="68" y1="78" x2="68" y2="114" />
-            <line x1="73" y1="78" x2="73" y2="114" />
-          </g>
-          <g>
-            <path d="M78 70 L180 77 L180 118 L78 116 Z" stroke="#E10600" stroke-width="2.8" fill="none" />
-            <rect x="85" y="77" width="26" height="34" fill="#E10600" rx="0.5" />
-            <rect x="115" y="79" width="28" height="33" fill="#E10600" rx="0.5" />
-            <rect x="147" y="81" width="27" height="31" fill="#E10600" rx="0.5" />
-          </g>
-          <g stroke="#E10600" stroke-linecap="round">
-            <line x1="42" y1="124" x2="200" y2="124" stroke-width="2.2" />
-            <line x1="48" y1="128" x2="194" y2="128" stroke-width="1.3" />
-          </g>
-        </svg>
-        <div class="logo-text-group">
-          <span class="logo-title-arch" style="color: #fff;">ARCHITECTURE</span>
-          <span class="logo-title-main">INTERIOR DESIGN</span>
-        </div>
-      </div>
-
-      <nav class="mobile-nav-list">
-        <a href="#home" class="mobile-nav-link"><span class="num">01</span> Home</a>
-        <a href="#about" class="mobile-nav-link"><span class="num">02</span> About</a>
-        <a href="#services" class="mobile-nav-link"><span class="num">03</span> Services</a>
-        <a href="#projects" class="mobile-nav-link"><span class="num">04</span> Projects</a>
-        <a href="#process" class="mobile-nav-link"><span class="num">05</span> Process</a>
-        <a href="#testimonials" class="mobile-nav-link"><span class="num">06</span> Testimonials</a>
-        <a href="#contact" class="mobile-nav-link"><span class="num">07</span> Contact</a>
-      </nav>
-    </div>
-
-    <div class="mobile-drawer-footer">
-      <button class="btn btn-primary js-open-estimate" style="width: 100%; margin-bottom: 1.5rem;">
-        Start Your Project →
-      </button>
-      <div class="mobile-contact-item">
-        <strong>Direct Call / WhatsApp:</strong><br>
-        <a href="tel:+923333001231">+92 333 3001231</a>
-      </div>
-      <div class="mobile-contact-item">
-        <strong>Email:</strong><br>
-        <a href="mailto:architectureinteriordesign@gmail.com">architectureinteriordesign@gmail.com</a>
-      </div>
-      <div class="mobile-contact-item" style="margin-top: 0.75rem; font-size: 0.8rem;">
-        Shahrah-e-Faisal Rd, Block 2 P.E.C.H.S., Karachi
-      </div>
-    </div>
-  </aside>
-
-  <main>
-    <!-- ==========================================================================
-         HERO SECTION
-         ========================================================================== -->
-    <section class="hero-section" id="home" aria-label="Hero Section">
-      <div class="hero-background-wrapper">
-        <img 
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85" 
-          alt="Luxury modern architectural residence in evening light" 
-          class="hero-bg-img hero-bg-anim"
-        >
-        <div class="hero-overlay"></div>
-        <div class="hero-grid-overlay"></div>
-      </div>
-
-      <div class="container hero-content">
-        <!-- Small Category Badge -->
-        <div class="hero-load-1">
-          <div class="hero-badge">
-            <span class="pulse-badge" aria-hidden="true"></span>
-            <span>ARCHITECTURE • INTERIOR • CONSTRUCTION</span>
-          </div>
-        </div>
-
-        <!-- Main Headline -->
-        <h1 class="hero-title hero-load-2">
-          WHERE VISION<br>
-          MEETS <span class="text-red">REALITY</span>
-        </h1>
-
-        <!-- Supporting Narrative -->
-        <p class="hero-description hero-load-3">
-          We create innovative and functional spaces that reflect the unique vision of every client — blending aesthetics, practicality, and quality.
-        </p>
-
-        <!-- CTA Buttons -->
-        <div class="hero-actions hero-load-4">
-          <a href="#projects" class="btn btn-outline-white">
-            <span>Explore Our Work</span>
-            <span class="btn-icon-arrow" aria-hidden="true">↓</span>
-          </a>
-          <button class="btn btn-primary js-open-estimate">
-            <span>Start a Project</span>
-            <span class="btn-icon-arrow" aria-hidden="true">→</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Bottom Scroll Indicator -->
-      <a href="#about" class="hero-scroll-indicator hero-load-5" aria-label="Scroll to explore">
-        <span>Scroll To Explore</span>
-        <div class="scroll-icon-mouse" aria-hidden="true">
-          <div class="scroll-icon-dot"></div>
-        </div>
-      </a>
-    </section>
-
-
-    <!-- ==========================================================================
-         ABOUT SECTION
-         ========================================================================== -->
-    <section class="section section-white arch-grid-bg" id="about" aria-label="About Our Studio">
-      <div class="container">
-        
-        <div class="about-grid">
-          <!-- Text Content Side -->
-          <div class="about-content reveal reveal-left">
-            <span class="eyebrow">Studio Overview</span>
-            <h2 class="section-title">
-              DESIGNING SPACES<br>
-              THAT <span class="text-red">INSPIRE</span>
-            </h2>
-            
-            <p class="about-lead">
-              As an Architectural Designer, I specialize in creating innovative and functional spaces that reflect the unique vision of each client. With a passion for design and a commitment to quality, I blend aesthetics with practicality to transform both residential and commercial environments.
-            </p>
-
-            <p class="about-body-text">
-              My philosophy revolves around collaboration and understanding. I believe that every project begins with listening—truly grasping my clients' needs and aspirations. By fostering open communication and incorporating sustainable practices, I aim to deliver designs that not only meet expectations but also enhance the overall experience of the space.
-            </p>
-
-            <!-- Metrics & Statistics Strip -->
-            <div class="about-stats-strip">
-              <div class="about-stat-item">
-                <span class="stat-value stat-counter" data-target="4.5" data-decimal="true">4.5</span>
-                <span class="stat-label">Google Rating (19 Reviews)</span>
-              </div>
-              <div class="about-stat-item">
-                <span class="stat-value">Karachi</span>
-                <span class="stat-label">P.E.C.H.S. Studio</span>
-              </div>
-              <div class="about-stat-item">
-                <span class="stat-value">End-to-End</span>
-                <span class="stat-label">Concept to Turnkey</span>
-              </div>
-            </div>
-
-            <div style="margin-top: 2rem;">
-              <a href="#contact" class="link-editorial">
-                <span>Book a Consultation</span>
-                <span aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Asymmetric Architectural Image Side -->
-          <div class="about-image-wrapper reveal reveal-right delay-200">
-            <div class="about-main-img-card">
-              <img 
-                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80" 
-                alt="Architectural design drawings, model drafting, and workspace"
-                loading="lazy"
-              >
-            </div>
-            
-            <!-- Floating Credentials Badge -->
-            <div class="about-floating-badge">
-              <div class="floating-badge-title">Karachi Studio</div>
-              <div class="floating-badge-text">
-                Shahrah-e-Faisal Rd, Block 2 P.E.C.H.S., Karachi.<br>
-                Open Daily: 10:00 AM – 6:00 PM
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ==========================================================================
-         SERVICES SECTION
-         ========================================================================== -->
-    <section class="section section-off-white" id="services" aria-label="Services">
-      <div class="container">
-        
-        <div class="section-header text-center reveal reveal-up">
-          <span class="eyebrow">Expertise & Disciplines</span>
-          <h2 class="section-title">WHAT WE DO</h2>
-          <p class="section-subtitle">
-            From concept to completion, we create spaces designed around people, purpose and possibility.
-          </p>
-        </div>
-
-        <div class="services-grid">
-          
-          <!-- Service 01: Residential Design -->
-          <article class="service-card reveal reveal-up delay-100">
-            <div>
-              <div class="service-header">
-                <span class="service-number">01</span>
-                <div class="service-card-icon" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                    <polyline points="9 22 9 12 15 12 15 22"/>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="service-title">RESIDENTIAL DESIGN</h3>
-              <p class="service-description">
-                Comprehensive residential design including custom homes, renovations and interior design. Every space is tailored to the personality, lifestyle and requirements of the homeowner.
-              </p>
-              <div class="service-tags">
-                <span class="service-tag">Custom Villas</span>
-                <span class="service-tag">Full Home Renovations</span>
-                <span class="service-tag">Luxury Living Suites</span>
-                <span class="service-tag">Modular Kitchens</span>
-              </div>
-            </div>
-            <div class="service-footer">
-              <button class="link-editorial js-open-estimate" style="font-size: 0.8rem;">
-                Request Residential Quote →
-              </button>
-              <span class="text-muted" style="font-size: 0.8rem; font-weight: 600;">Concept to Build</span>
-            </div>
-          </article>
-
-          <!-- Service 02: Commercial Design -->
-          <article class="service-card reveal reveal-up delay-200">
-            <div>
-              <div class="service-header">
-                <span class="service-number">02</span>
-                <div class="service-card-icon" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="service-title">COMMERCIAL DESIGN</h3>
-              <p class="service-description">
-                Dynamic and efficient environments for offices, retail establishments and hospitality projects, designed to strengthen brand identity and improve customer and employee experience.
-              </p>
-              <div class="service-tags">
-                <span class="service-tag">Corporate Headquarters</span>
-                <span class="service-tag">Retail Flagships</span>
-                <span class="service-tag">Clinics & Wellness</span>
-                <span class="service-tag">Hospitality Interiors</span>
-              </div>
-            </div>
-            <div class="service-footer">
-              <button class="link-editorial js-open-estimate" style="font-size: 0.8rem;">
-                Request Commercial Quote →
-              </button>
-              <span class="text-muted" style="font-size: 0.8rem; font-weight: 600;">Brand-Aligned</span>
-            </div>
-          </article>
-
-          <!-- Service 03: Civil Contractor Services -->
-          <article class="service-card reveal reveal-up delay-300">
-            <div>
-              <div class="service-header">
-                <span class="service-number">03</span>
-                <div class="service-card-icon" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M2 20h20"/>
-                    <path d="M5 20V8l7-5 7 5v12"/>
-                    <line x1="9" y1="12" x2="9" y2="12.01"/>
-                    <line x1="15" y1="12" x2="15" y2="12.01"/>
-                    <line x1="9" y1="16" x2="9" y2="16.01"/>
-                    <line x1="15" y1="16" x2="15" y2="16.01"/>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="service-title">CIVIL CONTRACTOR SERVICES</h3>
-              <p class="service-description">
-                Comprehensive construction services including project management, site supervision and quality control, with a focus on quality workmanship, timelines and budgets.
-              </p>
-              <div class="service-tags">
-                <span class="service-tag">Site Supervision</span>
-                <span class="service-tag">Structural Engineering</span>
-                <span class="service-tag">Quality Control</span>
-                <span class="service-tag">Budget & Timeline Adherence</span>
-              </div>
-            </div>
-            <div class="service-footer">
-              <button class="link-editorial js-open-estimate" style="font-size: 0.8rem;">
-                Request Civil Contracting →
-              </button>
-              <span class="text-muted" style="font-size: 0.8rem; font-weight: 600;">Engineered Quality</span>
-            </div>
-          </article>
-
-          <!-- Service 04: Joint Venture Services -->
-          <article class="service-card reveal reveal-up delay-400">
-            <div>
-              <div class="service-header">
-                <span class="service-number">04</span>
-                <div class="service-card-icon" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                    <circle cx="9" cy="7" r="4"/>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="service-title">JOINT VENTURE (JV) SERVICES</h3>
-              <p class="service-description">
-                Collaborative project solutions involving strategic planning, resource sharing and execution to maximize efficiency and minimize risk across real estate developments.
-              </p>
-              <div class="service-tags">
-                <span class="service-tag">Strategic Planning</span>
-                <span class="service-tag">Resource Synergy</span>
-                <span class="service-tag">Risk Minimization</span>
-                <span class="service-tag">Execution Partnerships</span>
-              </div>
-            </div>
-            <div class="service-footer">
-              <button class="link-editorial js-open-estimate" style="font-size: 0.8rem;">
-                Discuss JV Partnership →
-              </button>
-              <span class="text-muted" style="font-size: 0.8rem; font-weight: 600;">High Yield</span>
-            </div>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ==========================================================================
-         PORTFOLIO SECTION
-         ========================================================================== -->
-    <section class="section section-white" id="projects" aria-label="Portfolio">
-      <div class="container">
-        
-        <div class="section-header text-center reveal reveal-up">
-          <span class="eyebrow">Curated Works</span>
-          <h2 class="section-title">OUR PORTFOLIO</h2>
-          <p class="section-subtitle">
-            Selected architectural and interior design work.
-          </p>
-        </div>
-
-        <!-- Filter Buttons -->
-        <div class="portfolio-filters reveal reveal-up delay-100">
-          <button class="filter-btn is-active" data-filter="all">ALL</button>
-          <button class="filter-btn" data-filter="residential">RESIDENTIAL</button>
-          <button class="filter-btn" data-filter="commercial">COMMERCIAL</button>
-          <button class="filter-btn" data-filter="civil">CIVIL CONSTRUCTION</button>
-          <button class="filter-btn" data-filter="3d">3D VISUALIZATION</button>
-        </div>
-
-        <!-- Dynamic Grid Container -->
-        <div class="portfolio-grid" id="portfolioGrid">
-          <!-- Populated by js/portfolio.js -->
-        </div>
-
-        <div style="text-align: center; margin-top: 3.5rem;" class="reveal reveal-up">
-          <button class="btn btn-dark js-open-estimate">
-            <span>Inquire for Custom Design</span>
-            <span class="btn-icon-arrow" aria-hidden="true">→</span>
-          </button>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ==========================================================================
-         PROJECT DETAIL LIGHTBOX MODAL
-         ========================================================================== -->
-    <div class="lightbox-modal" id="projectLightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
-      <div class="lightbox-dialog">
-        <button class="lightbox-close-btn" id="lightboxClose" aria-label="Close project modal">✕</button>
-        
-        <div class="lightbox-image-side">
-          <img id="lightboxImg" class="lightbox-img" src="" alt="Project detail image">
-        </div>
-
-        <div class="lightbox-content-side">
-          <div>
-            <div id="lightboxCategory" class="lightbox-category">Category</div>
-            <h3 id="lightboxTitle" class="lightbox-title">Project Title</h3>
-            <div id="lightboxLocation" class="text-muted" style="font-size: 0.85rem; margin-bottom: 1.25rem;">Location</div>
-            <p id="lightboxDescription" class="lightbox-description">Project Description</p>
-            
-            <div id="lightboxSpecs" class="lightbox-spec-list">
-              <!-- Specs generated dynamically -->
-            </div>
-          </div>
-
-          <div>
-            <a id="lightboxInquireBtn" href="#" target="_blank" class="btn btn-primary" style="width: 100%;">
-              <span>Inquire About This Style on WhatsApp</span>
-              <span class="btn-icon-arrow" aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- ==========================================================================
-         PROCESS SECTION
-         ========================================================================== -->
-    <section class="section section-off-white" id="process" aria-label="Our Process">
-      <div class="container">
-        
-        <div class="section-header reveal reveal-up">
-          <span class="eyebrow">Methodology</span>
-          <h2 class="section-title">
-            FROM FIRST IDEA<br>
-            TO <span class="text-red">FINAL DETAIL</span>
-          </h2>
-          <p class="section-subtitle">
-            A transparent, collaborative architectural journey ensuring precision at every milestone.
-          </p>
-        </div>
-
-        <div class="process-timeline">
-          
-          <!-- Stage 01 -->
-          <div class="process-step reveal reveal-up delay-100">
-            <span class="process-num">01</span>
-            <h3 class="process-step-title">CONSULTATION</h3>
-            <p class="process-step-desc">
-              Initial meetings to discuss ideas, budget, and project requirements. This phase establishes a strong foundation for the design process.
-            </p>
-          </div>
-
-          <!-- Stage 02 -->
-          <div class="process-step reveal reveal-up delay-200">
-            <span class="process-num">02</span>
-            <h3 class="process-step-title">DESIGN DEVELOPMENT</h3>
-            <p class="process-step-desc">
-              Creation of concept sketches and 3D models based on client feedback. Iterative revisions ensure the design aligns with the client's vision.
-            </p>
-          </div>
-
-          <!-- Stage 03 -->
-          <div class="process-step reveal reveal-up delay-300">
-            <span class="process-num">03</span>
-            <h3 class="process-step-title">EXECUTION</h3>
-            <p class="process-step-desc">
-              Collaboration with contractors and oversight of the construction process to ensure quality and adherence to the design.
-            </p>
-          </div>
-
-          <!-- Stage 04 -->
-          <div class="process-step reveal reveal-up delay-400">
-            <span class="process-num">04</span>
-            <h3 class="process-step-title">POST-COMPLETION FOLLOW-UP</h3>
-            <p class="process-step-desc">
-              Final walkthroughs and adjustments based on client feedback. Continued support to ensure long-term satisfaction.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ==========================================================================
-         TESTIMONIALS SECTION
-         ========================================================================== -->
-    <section class="section section-white" id="testimonials" aria-label="Client Testimonials">
-      <div class="container">
-        
-        <div class="section-header text-center reveal reveal-up">
-          <span class="eyebrow">Client Endorsements</span>
-          <h2 class="section-title">WHAT OUR CLIENTS SAY</h2>
-          
-          <!-- Google Rating Verified Badge -->
-          <div class="google-rating-badge">
-            <span class="rating-stars" aria-label="4.5 out of 5 stars">★★★★★</span>
-            <span class="rating-text">4.5 Stars from 19 Verified Google Reviews</span>
-          </div>
-        </div>
-
-        <div class="testimonials-grid">
-          
-          <!-- Testimonial 1 -->
-          <div class="testimonial-card reveal reveal-up delay-100">
-            <div>
-              <div class="testimonial-quote-icon" aria-hidden="true">“</div>
-              <p class="testimonial-text">
-                "We wanted our home renovated without losing its warmth and personality. From the first consultation through concept sketches and 3D models, every revision was based on our feedback. The final space perfectly reflects our lifestyle — functional, beautiful, and truly ours."
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <div class="author-name">Hammad Khan</div>
-              <div class="author-role">Homeowner, Karachi</div>
-            </div>
-          </div>
-
-          <!-- Testimonial 2 -->
-          <div class="testimonial-card reveal reveal-up delay-200">
-            <div>
-              <div class="testimonial-quote-icon" aria-hidden="true">“</div>
-              <p class="testimonial-text">
-                "Our retail space needed a redesign that strengthened our brand identity while staying practical for daily operations. The design process was collaborative from concept to execution, and the final space has genuinely improved both customer experience and staff productivity."
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <div class="author-name">Shahid Amin</div>
-              <div class="author-role">Business Owner, Commercial Project</div>
-            </div>
-          </div>
-
-          <!-- Testimonial 3 -->
-          <div class="testimonial-card reveal reveal-up delay-300">
-            <div>
-              <div class="testimonial-quote-icon" aria-hidden="true">“</div>
-              <p class="testimonial-text">
-                "Managing a full construction project can be stressful, but the site supervision and quality control here gave us complete peace of mind. Timelines and budgets were respected at every stage, and the post-completion follow-up showed real commitment to long-term satisfaction."
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <div class="author-name">Yahyah Khan</div>
-              <div class="author-role">Client, Construction & Project Management</div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ==========================================================================
-         DRAMATIC DARK CTA SECTION
-         ========================================================================== -->
-    <section class="cta-banner" aria-label="Call to Action">
-      <div class="container">
-        <div class="cta-content-wrapper reveal reveal-up">
-          <div class="cta-text-side">
-            <span class="eyebrow eyebrow-dark">Start Your Transformation</span>
-            <h2 class="cta-heading">
-              LET'S CREATE<br>
-              <span class="text-red">SOMETHING REMARKABLE</span>
-            </h2>
-            <p class="cta-subtitle">
-              Have a space in mind? Let's discuss your vision and turn it into a thoughtful, functional design.
-            </p>
-          </div>
-
-          <div class="cta-buttons-side">
-            <button class="btn btn-primary js-open-estimate">
-              <span>Start a Project</span>
-              <span class="btn-icon-arrow" aria-hidden="true">→</span>
-            </button>
-            
-            <a href="https://wa.me/923333001231" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
-              <span>WhatsApp Us</span>
-              <span class="btn-icon-arrow" aria-hidden="true">💬</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ==========================================================================
-         CONTACT & INQUIRY SECTION
-         ========================================================================== -->
-    <section class="section section-off-white" id="contact" aria-label="Contact Information">
-      <div class="container">
-        
-        <div class="section-header reveal reveal-up">
-          <span class="eyebrow">Connect With Us</span>
-          <h2 class="section-title">START A CONVERSATION</h2>
-          <p class="section-subtitle">
-            Visit our Karachi design studio or send us a message to discuss your architectural and interior aspirations.
-          </p>
-        </div>
-
-        <div class="contact-layout-grid">
-          
-          <!-- Contact Details & Map Card -->
-          <div class="contact-info-panel reveal reveal-left">
-            
-            <!-- Phone -->
-            <div class="contact-card-item">
-              <div class="contact-card-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                </svg>
-              </div>
-              <div>
-                <div class="contact-card-label">Direct Phone</div>
-                <div class="contact-card-value">
-                  <a href="tel:+923333001231">+92 333 3001231</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- WhatsApp -->
-            <div class="contact-card-item">
-              <div class="contact-card-icon" style="color: #25D366;" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
-                </svg>
-              </div>
-              <div>
-                <div class="contact-card-label">WhatsApp Channel</div>
-                <div class="contact-card-value">
-                  <a href="https://wa.me/923333001231" target="_blank" rel="noopener noreferrer">+92 333 3001231</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Email -->
-            <div class="contact-card-item">
-              <div class="contact-card-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                  <polyline points="22,6 12,13 2,6"/>
-                </svg>
-              </div>
-              <div>
-                <div class="contact-card-label">Email Address</div>
-                <div class="contact-card-value">
-                  <a href="mailto:architectureinteriordesign@gmail.com">architectureinteriordesign@gmail.com</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Address -->
-            <div class="contact-card-item">
-              <div class="contact-card-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                  <circle cx="12" cy="10" r="3"/>
-                </svg>
-              </div>
-              <div>
-                <div class="contact-card-label">Studio Address</div>
-                <div class="contact-card-value" style="line-height: 1.5;">
-                  Block-7 & 8, Shahrah-e-Faisal Rd,<br>
-                  Block 2 P.E.C.H.S., Karachi, 74000, Pakistan
-                </div>
-              </div>
-            </div>
-
-            <!-- Hours -->
-            <div class="contact-card-item">
-              <div class="contact-card-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/>
-                  <polyline points="12 6 12 12 16 14"/>
-                </svg>
-              </div>
-              <div>
-                <div class="contact-card-label">Business Hours</div>
-                <div class="contact-card-value">
-                  10:00 AM – 6:00 PM (Daily)
-                </div>
-              </div>
-            </div>
-
-            <!-- Google Maps Card -->
-            <div class="map-locator-card">
-              <div class="map-locator-header">
-                <div>
-                  <strong style="font-size: 0.9rem; text-transform: uppercase;">Karachi Location Map</strong>
-                  <div style="font-size: 0.75rem; color: #777;">Shahrah-e-Faisal Rd, P.E.C.H.S.</div>
-                </div>
-                <span class="pulse-badge" aria-hidden="true"></span>
-              </div>
-              
-              <div class="map-preview-box">
-                <img 
-                  src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80" 
-                  alt="Karachi urban street map preview" 
-                  class="map-mock-bg"
-                >
-                <div class="map-pin-pulse">
-                  <div class="pin-icon">📍</div>
-                  <div style="background: #111; color: #fff; padding: 2px 8px; font-size: 0.68rem; font-weight: 700; border-radius: 2px; margin-top: -4px;">
-                    STUDIO
-                  </div>
-                </div>
-              </div>
-
-              <a 
-                href="https://maps.google.com/?q=Block-7+%26+8,+Shahrah-e-Faisal+Rd,+Block+2+P.E.C.H.S.,+Karachi,+74000,+Pakistan" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="btn btn-outline-dark" 
-                style="width: 100%;"
-              >
-                <span>Open in Google Maps</span>
-                <span class="btn-icon-arrow" aria-hidden="true">↗</span>
-              </a>
-            </div>
-
-          </div>
-
-          <!-- Interactive Contact Form -->
-          <div class="contact-form-panel reveal reveal-right delay-200">
-            <h3 class="form-title">SEND AN INQUIRY</h3>
-            <p class="form-subtitle">Fill in the details below to request a tailored architectural proposal.</p>
-
-            <form id="contactForm">
-              <div class="form-group-row">
-                <div class="form-group">
-                  <label class="form-label" for="contactName">Full Name *</label>
-                  <input type="text" id="contactName" class="form-input" placeholder="e.g. Hammad Khan" required>
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="contactPhone">Phone / WhatsApp *</label>
-                  <input type="tel" id="contactPhone" class="form-input" placeholder="+92 300 0000000" required>
-                </div>
-              </div>
-
-              <div class="form-group-row">
-                <div class="form-group">
-                  <label class="form-label" for="contactEmail">Email Address *</label>
-                  <input type="email" id="contactEmail" class="form-input" placeholder="name@example.com" required>
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="contactType">Project Type</label>
-                  <select id="contactType" class="form-select">
-                    <option value="Residential Architecture">Residential Architecture</option>
-                    <option value="Luxury Interior Design">Luxury Interior Design</option>
-                    <option value="Commercial Office / Retail">Commercial Office / Retail</option>
-                    <option value="Civil Contractor Construction">Civil Contractor Construction</option>
-                    <option value="Joint Venture (JV) Collaboration">Joint Venture (JV) Collaboration</option>
-                    <option value="3D Architectural Visualization">3D Architectural Visualization</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="contactMessage">Project Details & Vision *</label>
-                <textarea id="contactMessage" class="form-textarea" placeholder="Describe your site location in Karachi, required spaces, approximate square footage, and budget expectations..." required></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary" style="width: 100%;">
-                <span>Send Inquiry</span>
-                <span class="btn-icon-arrow" aria-hidden="true">→</span>
-              </button>
-
-              <div id="formStatusMsg" class="form-status-msg" role="status"></div>
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-
-  <!-- ==========================================================================
-       PROJECT QUICK ESTIMATE MODAL ("START YOUR PROJECT")
-       ========================================================================== -->
-  <div class="estimate-modal" id="estimateModal" role="dialog" aria-modal="true" aria-labelledby="estModalTitle">
-    <div class="estimate-dialog">
-      <button class="lightbox-close-btn" id="estimateClose" aria-label="Close estimate modal">✕</button>
-      
-      <span class="eyebrow">Project Consultation</span>
-      <h3 id="estModalTitle" class="form-title" style="margin-bottom: 0.5rem;">START YOUR PROJECT</h3>
-      <p class="form-subtitle">Share your requirements and we will connect via WhatsApp or Phone within 24 hours.</p>
-
-      <form id="estimateForm">
-        <div class="form-group-row">
-          <div class="form-group">
-            <label class="form-label" for="estName">Your Name *</label>
-            <input type="text" id="estName" class="form-input" placeholder="e.g. Asad Siddiqui" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="estPhone">WhatsApp / Phone *</label>
-            <input type="tel" id="estPhone" class="form-input" placeholder="+92 333 0000000" required>
-          </div>
-        </div>
-
-        <div class="form-group-row">
-          <div class="form-group">
-            <label class="form-label" for="estService">Primary Service</label>
-            <select id="estService" class="form-select">
-              <option value="Residential Design & Build">Residential Design & Build</option>
-              <option value="Commercial Space Design">Commercial Space Design</option>
-              <option value="Civil Contracting Services">Civil Contracting Services</option>
-              <option value="Joint Venture Development">Joint Venture Development</option>
-              <option value="Full Turnkey Architecture">Full Turnkey Architecture</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="estSize">Approx Area (Sq. Ft / Yards)</label>
-            <input type="text" id="estSize" class="form-input" placeholder="e.g. 500 Sq Yards / 4,000 Sq Ft">
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="estTimeline">Target Timeline</label>
-          <select id="estTimeline" class="form-select">
-            <option value="Immediate (Within 1 Month)">Immediate (Within 1 Month)</option>
-            <option value="1 to 3 Months">1 to 3 Months</option>
-            <option value="3 to 6 Months">3 to 6 Months</option>
-            <option value="Planning Phase (Flexible)">Planning Phase (Flexible)</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="estDetails">Brief Notes / Special Requests</label>
-          <textarea id="estDetails" class="form-textarea" placeholder="Tell us about your property location in Karachi and any specific architectural preferences..."></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary" style="width: 100%;">
-          <span>Submit & Connect on WhatsApp →</span>
-        </button>
-
-        <div id="estimateStatusMsg" class="form-status-msg" role="status"></div>
-      </form>
-    </div>
-  </div>
-
-
-  <!-- ==========================================================================
-       FOOTER
-       ========================================================================== -->
-  <footer class="site-footer" aria-label="Site Footer">
-    <div class="container">
-      
-      <div class="footer-top-grid">
-        <!-- Brand & Tagline -->
-        <div class="footer-brand-side">
-          <div class="brand-logo" style="margin-bottom: 1rem;">
-            <svg class="logo-icon-svg" viewBox="0 0 240 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <g stroke="#E10600" stroke-width="1.8" stroke-linecap="round">
-                <path d="M165 24 L195 30 L195 98 L165 98 Z" stroke-width="2" fill="none"/>
-                <line x1="171" y1="25.5" x2="171" y2="98" />
-                <line x1="177" y1="26.8" x2="177" y2="98" />
-                <line x1="183" y1="28" x2="183" y2="98" />
-                <line x1="189" y1="29" x2="189" y2="98" />
-              </g>
-              <path d="M48 20 L175 44 L175 62 L64 41 L64 78 L48 78 Z" fill="#E10600" />
-              <g stroke="#E10600" stroke-width="1.8" fill="none">
-                <path d="M64 45 L166 64 L166 84 L64 66 Z" />
-                <line x1="104" y1="52.5" x2="104" y2="72.5" />
-                <line x1="136" y1="58.5" x2="136" y2="78.5" />
-                <path d="M64 54 L166 73" stroke-width="1.3" />
-              </g>
-              <g stroke="#E10600" stroke-width="1.6">
-                <path d="M48 78 L78 78 L78 114 L48 114 Z" stroke-width="2" fill="none"/>
-                <line x1="53" y1="78" x2="53" y2="114" />
-                <line x1="58" y1="78" x2="58" y2="114" />
-                <line x1="63" y1="78" x2="63" y2="114" />
-                <line x1="68" y1="78" x2="68" y2="114" />
-                <line x1="73" y1="78" x2="73" y2="114" />
-              </g>
-              <g>
-                <path d="M78 70 L180 77 L180 118 L78 116 Z" stroke="#E10600" stroke-width="2.8" fill="none" />
-                <rect x="85" y="77" width="26" height="34" fill="#E10600" rx="0.5" />
-                <rect x="115" y="79" width="28" height="33" fill="#E10600" rx="0.5" />
-                <rect x="147" y="81" width="27" height="31" fill="#E10600" rx="0.5" />
-              </g>
-              <g stroke="#E10600" stroke-linecap="round">
-                <line x1="42" y1="124" x2="200" y2="124" stroke-width="2.2" />
-                <line x1="48" y1="128" x2="194" y2="128" stroke-width="1.3" />
-              </g>
-            </svg>
-            <div class="logo-text-group">
-              <span class="logo-title-arch" style="color: #fff;">ARCHITECTURE</span>
-              <span class="logo-title-main">INTERIOR DESIGN</span>
-            </div>
-          </div>
-          <p>
-            "Where Vision Meets Reality" — Crafting architectural precision, luxury interiors, and structural excellence across residential and commercial projects in Karachi.
-          </p>
-        </div>
-
-        <!-- Directory Links -->
-        <div>
-          <div class="footer-column-title">Directory</div>
-          <ul class="footer-link-list">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Studio</a></li>
-            <li><a href="#services">Our Services</a></li>
-            <li><a href="#projects">Selected Portfolio</a></li>
-            <li><a href="#process">Design Process</a></li>
-            <li><a href="#testimonials">Client Reviews</a></li>
-            <li><a href="#contact">Contact & Map</a></li>
-          </ul>
-        </div>
-
-        <!-- Services -->
-        <div>
-          <div class="footer-column-title">Disciplines</div>
-          <ul class="footer-link-list">
-            <li><a href="#services">Residential Architecture</a></li>
-            <li><a href="#services">Commercial & Retail Design</a></li>
-            <li><a href="#services">Civil Contractor Services</a></li>
-            <li><a href="#services">Joint Venture (JV) Projects</a></li>
-            <li><a href="#services">3D CGI Visualization</a></li>
-            <li><a href="#services">Site Supervision & Quality</a></li>
-          </ul>
-        </div>
-
-        <!-- Studio & Contact -->
-        <div>
-          <div class="footer-column-title">Studio Location</div>
-          <div style="font-size: 0.875rem; color: #A0A0A0; line-height: 1.7; margin-bottom: 1rem;">
-            Block-7 & 8, Shahrah-e-Faisal Rd,<br>
-            Block 2 P.E.C.H.S.,<br>
-            Karachi, 74000, Pakistan
-          </div>
-          <div style="font-size: 0.85rem; color: #E0E0E0; margin-bottom: 0.35rem;">
-            <strong>Phone:</strong> <a href="tel:+923333001231" style="color: #E10600;">+92 333 3001231</a>
-          </div>
-          <div style="font-size: 0.85rem; color: #E0E0E0; margin-bottom: 0.35rem;">
-            <strong>WhatsApp:</strong> <a href="https://wa.me/923333001231" target="_blank" rel="noopener noreferrer" style="color: #25D366;">+92 333 3001231</a>
-          </div>
-          <div style="font-size: 0.85rem; color: #A0A0A0;">
-            <strong>Hours:</strong> 10:00 AM – 6:00 PM
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Footer Bottom Bar -->
-      <div class="footer-bottom-bar">
-        <div>
-          © 2026 Architecture Interior Design. All Rights Reserved.
-        </div>
-        <div style="display: flex; gap: 1.5rem;">
-          <a href="#home">Back to Top ↑</a>
-          <a href="https://wa.me/923333001231" target="_blank" rel="noopener noreferrer">WhatsApp Support</a>
-        </div>
-      </div>
-
-    </div>
-  </footer>
-
-
-  <!-- ==========================================================================
-       DYNAMIC WHATSAPP ATTENTION & FLOATING POPUP SYSTEM
-       ========================================================================== -->
-  <div class="floating-whatsapp-container" id="floatingWaContainer">
-    
-    <!-- Dynamic Popup Message Card (Automatically appears to attract customer attention) -->
-    <div class="wa-popup-card" id="waPopupCard" role="dialog" aria-label="WhatsApp Quick Support">
-      <div class="wa-popup-header">
-        <div class="wa-header-profile">
-          <div class="wa-avatar">
-            🏛️
-            <div class="wa-avatar-online" aria-hidden="true"></div>
-          </div>
-          <div class="wa-header-info">
-            <span class="wa-header-name">Design Lead • Karachi</span>
-            <span class="wa-header-status">🟢 Online Now</span>
-          </div>
-        </div>
-        <button class="wa-popup-close-btn" id="waPopupCloseBtn" aria-label="Close message">✕</button>
-      </div>
-
-      <div class="wa-popup-body">
-        <div class="wa-message-bubble">
-          👋 <strong>Hello!</strong> Looking for architectural design, interior makeover, or civil construction in Karachi? How can we assist your vision today?
-        </div>
-
-        <div class="wa-chips-title">Quick Inquiries:</div>
-        <div class="wa-chips-list">
-          <button class="wa-chip-btn js-wa-chip" data-msg="Hello Architecture Interior Design, I would like to get a consultation and quote for Residential Villa / Home Design in Karachi.">
-            <span>🏠 Residential Design Quote</span>
-            <span class="wa-chip-arrow">→</span>
-          </button>
-          <button class="wa-chip-btn js-wa-chip" data-msg="Hello Architecture Interior Design, I am inquiring about Commercial Office / Retail Store Interior Design in Karachi.">
-            <span>🏢 Commercial / Office Design</span>
-            <span class="wa-chip-arrow">→</span>
-          </button>
-          <button class="wa-chip-btn js-wa-chip" data-msg="Hello Architecture Interior Design, I would like to discuss Civil Contractor & Construction Services for my plot/property.">
-            <span>🏗️ Civil Construction Services</span>
-            <span class="wa-chip-arrow">→</span>
-          </button>
-        </div>
-      </div>
-
-      <div class="wa-popup-footer">
-        <a 
-          href="https://wa.me/923333001231?text=Hello%20Architecture%20Interior%20Design%2C%20I%20would%20like%20to%20inquire%20about%20a%20project%20in%20Karachi." 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          class="wa-direct-chat-link"
-        >
-          <span>Open Direct WhatsApp Chat</span>
-          <span aria-hidden="true">💬</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Dynamic WhatsApp Trigger Button with Pulsing Badge & Radar Glow -->
-    <button 
-      class="floating-whatsapp-widget" 
-      id="waMainBtn" 
-      aria-label="Chat with us on WhatsApp (+92 333 3001231)"
-    >
-      <span class="wa-unread-badge" id="waUnreadBadge">1</span>
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
-      </svg>
-      <span>Chat on WhatsApp</span>
-    </button>
-
-  </div>
-
-  <!-- JavaScript Modules -->
-  <script src="js/portfolio.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/form.js"></script>
-  <script src="js/app.js"></script>
-</body>
-</html>
+
+  <!-- Embedded Zero-Dependency High Performance Styles -->
+  <style>
+/* ==========================================================================
+   ARCHITECTURE INTERIOR DESIGN — DESIGN SYSTEM & TOKENS
+   Brand Colors:
+   - Primary Brand Red: #E10600
+   - Deep Architectural Black: #111111
+   - Charcoal: #1C1C1C
+   - Soft Off-White: #F7F7F5
+   - Pure White: #FFFFFF
+   - Light Architectural Gray: #E9E9E7
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Brand Color Tokens */
+  --color-brand-red: #E10600;
+  --color-brand-red-hover: #c50500;
+  --color-brand-red-light: rgba(225, 6, 0, 0.08);
+  --color-brand-red-glow: rgba(225, 6, 0, 0.25);
+  
+  --color-black: #111111;
+  --color-charcoal: #1C1C1C;
+  --color-charcoal-light: #262626;
+  --color-charcoal-border: #333333;
+  
+  --color-off-white: #F7F7F5;
+  --color-white: #FFFFFF;
+  --color-gray-light: #E9E9E7;
+  --color-gray-medium: #D1D1CD;
+  --color-gray-text: #6B7280;
+  --color-gray-text-dark: #4B5563;
+  --color-gray-muted: #8E8E93;
+  
+  /* Typography Tokens */
+  --font-heading: 'Plus Jakarta Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);
+  --text-sm: clamp(0.875rem, 0.82rem + 0.25vw, 0.9375rem);
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.0625rem);
+  --text-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --text-3xl: clamp(1.875rem, 1.6rem + 1.4vw, 2.5rem);
+  --text-4xl: clamp(2.25rem, 1.85rem + 2vw, 3.25rem);
+  --text-5xl: clamp(2.75rem, 2.2rem + 2.75vw, 4.25rem);
+  --text-6xl: clamp(3.25rem, 2.5rem + 3.75vw, 5.5rem);
+  
+  /* Spacing Tokens */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+  
+  /* Layout & Grid */
+  --container-max: 1380px;
+  --container-wide: 1520px;
+  --container-narrow: 1080px;
+  --header-height: 80px;
+  --header-height-scrolled: 72px;
+  --border-radius-none: 0px;
+  --border-radius-xs: 2px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 6px;
+  
+  /* Transitions */
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --duration-fast: 0.2s;
+  --duration-normal: 0.35s;
+  --duration-slow: 0.6s;
+  --duration-luxury: 0.85s;
+  
+  /* Architectural Shadows & Glass */
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.04);
+  --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-elevation: 0 20px 50px rgba(0, 0, 0, 0.12);
+  --shadow-dark: 0 20px 40px rgba(0, 0, 0, 0.35);
+  --shadow-red: 0 10px 30px rgba(225, 6, 0, 0.25);
+  
+  --backdrop-blur-nav: blur(16px);
+  --border-subtle: 1px solid rgba(0, 0, 0, 0.08);
+  --border-dark: 1px solid rgba(255, 255, 255, 0.1);
+  --border-red: 1px solid var(--color-brand-red);
+}
+
+/* ==========================================================================
+   RESET & BASE STYLES
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.65;
+  color: var(--color-charcoal);
+  background-color: var(--color-off-white);
+  overflow-x: hidden;
+  position: relative;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--duration-fast) ease;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+::selection {
+  background-color: var(--color-brand-red);
+  color: var(--color-white);
+}
+
+/* Focus Visible Accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-brand-red);
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY SYSTEM
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--color-black);
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: var(--text-5xl); }
+h2 { font-size: var(--text-4xl); }
+h3 { font-size: var(--text-3xl); }
+h4 { font-size: var(--text-2xl); }
+h5 { font-size: var(--text-xl); }
+h6 { font-size: var(--text-lg); }
+
+.headline-huge {
+  font-size: var(--text-6xl);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.text-red {
+  color: var(--color-brand-red) !important;
+}
+
+.text-white {
+  color: var(--color-white) !important;
+}
+
+.text-muted {
+  color: var(--color-gray-text);
+}
+
+.text-lead {
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  color: var(--color-gray-text-dark);
+}
+
+/* Architectural Eyebrow / Label */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-brand-red);
+  margin-bottom: var(--space-md);
+}
+
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 2px;
+  background-color: var(--color-brand-red);
+}
+
+.eyebrow-dark {
+  color: var(--color-brand-red);
+}
+
+.eyebrow-dark::before {
+  background-color: var(--color-brand-red);
+}
+
+.eyebrow-white {
+  color: var(--color-white);
+}
+
+.eyebrow-white::before {
+  background-color: var(--color-brand-red);
+}
+
+/* Architectural Red Line Divider */
+.arch-line {
+  display: inline-block;
+  width: 48px;
+  height: 2px;
+  background-color: var(--color-brand-red);
+  margin: var(--space-md) 0;
+}
+
+.arch-line-vertical {
+  display: inline-block;
+  width: 2px;
+  height: 48px;
+  background-color: var(--color-brand-red);
+}
+
+/* ==========================================================================
+   CONTAINER & LAYOUT UTILITIES
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.25rem, 4vw, 3rem);
+  padding-right: clamp(1.25rem, 4vw, 3rem);
+}
+
+.container-wide {
+  max-width: var(--container-wide);
+}
+
+.container-narrow {
+  max-width: var(--container-narrow);
+}
+
+.section {
+  padding-top: clamp(4.5rem, 8vw, 7.5rem);
+  padding-bottom: clamp(4.5rem, 8vw, 7.5rem);
+  position: relative;
+}
+
+.section-dark {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4 {
+  color: var(--color-white);
+}
+
+.section-dark p {
+  color: #B0B0B0;
+}
+
+.section-charcoal {
+  background-color: var(--color-charcoal);
+  color: var(--color-white);
+}
+
+.section-charcoal h1,
+.section-charcoal h2,
+.section-charcoal h3,
+.section-charcoal h4 {
+  color: var(--color-white);
+}
+
+.section-white {
+  background-color: var(--color-white);
+}
+
+.section-header {
+  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.section-header.text-center {
+  text-align: center;
+}
+
+.section-header.text-center .eyebrow {
+  justify-content: center;
+}
+
+.section-title {
+  font-size: var(--text-4xl);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.section-subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-gray-text);
+  max-width: 640px;
+  line-height: 1.55;
+}
+
+.section-header.text-center .section-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==========================================================================
+   BUTTONS & INTERACTIVE ELEMENTS
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.95rem 1.85rem;
+  border-radius: var(--border-radius-xs);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--duration-normal) var(--ease-smooth);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--color-brand-red);
+  color: var(--color-white);
+  border: 1px solid var(--color-brand-red);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-brand-red-hover);
+  border-color: var(--color-brand-red-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-red);
+  color: var(--color-white);
+}
+
+.btn-outline-white {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-outline-white:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+.btn-outline-dark {
+  background-color: transparent;
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+.btn-dark {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: 1px solid var(--color-black);
+}
+
+.btn-dark:hover {
+  background-color: var(--color-brand-red);
+  border-color: var(--color-brand-red);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-red);
+  color: var(--color-white);
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+  color: #FFFFFF;
+  border: 1px solid #25D366;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1EBE5D;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+  color: #FFFFFF;
+}
+
+.btn-icon-arrow {
+  display: inline-block;
+  transition: transform var(--duration-fast) ease;
+}
+
+.btn:hover .btn-icon-arrow {
+  transform: translateX(4px);
+}
+
+/* Text Link with Red Underline Animation */
+.link-editorial {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-black);
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.link-editorial::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-brand-red);
+  transform: scaleX(0.3);
+  transform-origin: left;
+  transition: transform var(--duration-normal) var(--ease-smooth);
+}
+
+.link-editorial:hover::after {
+  transform: scaleX(1);
+}
+
+.link-editorial-white {
+  color: var(--color-white);
+}
+
+/* Architectural Number Tag */
+.arch-number {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: var(--color-brand-red);
+  letter-spacing: -0.02em;
+}
+
+/* Subtle Architectural Grid Pattern Overlay */
+.arch-grid-bg {
+  position: relative;
+}
+
+.arch-grid-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(225, 6, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(225, 6, 0, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+/* ==========================================================================
+   ARCHITECTURE INTERIOR DESIGN — ANIMATIONS & MICRO-INTERACTIONS
+   ========================================================================== */
+
+/* Keyframe Definitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heroZoomIn {
+  from {
+    transform: scale(1.06);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes drawLine {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes scrollIndicator {
+  0% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+}
+
+@keyframes pulseRedRing {
+  0% {
+    box-shadow: 0 0 0 0 rgba(225, 6, 0, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(225, 6, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(225, 6, 0, 0);
+  }
+}
+
+/* WhatsApp Dynamic Attention Animations */
+@keyframes waRippleRing {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+@keyframes waAttentionPop {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  15% {
+    transform: scale(1.12) translateY(-6px) rotate(-6deg);
+  }
+  30% {
+    transform: scale(1.12) translateY(-6px) rotate(6deg);
+  }
+  45% {
+    transform: scale(1.08) translateY(-4px) rotate(-4deg);
+  }
+  60% {
+    transform: scale(1.04) translateY(-2px) rotate(2deg);
+  }
+  75% {
+    transform: scale(1) translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes waBubbleSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.92);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes waBadgePing {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+
+/* ==========================================================================
+   SCROLL REVEAL SYSTEM (INTERSECTION OBSERVER)
+   ========================================================================== */
+
+.reveal {
+  opacity: 0;
+  transition: opacity var(--duration-luxury) var(--ease-smooth),
+              transform var(--duration-luxury) var(--ease-smooth);
+  will-change: opacity, transform;
+}
+
+.reveal-up {
+  transform: translateY(40px);
+}
+
+.reveal-down {
+  transform: translateY(-40px);
+}
+
+.reveal-left {
+  transform: translateX(45px);
+}
+
+.reveal-right {
+  transform: translateX(-45px);
+}
+
+.reveal-scale {
+  transform: scale(0.94);
+}
+
+.reveal.is-revealed {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* Stagger Delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-600 { transition-delay: 600ms; }
+
+/* Image Clip Reveal Effect */
+.clip-reveal-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.clip-reveal-wrap img {
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1), filter 0.8s ease;
+  will-change: transform;
+}
+
+.clip-reveal-wrap:hover img {
+  transform: scale(1.05);
+}
+
+/* Hero Staggered Initial Load Animations */
+.hero-load-1 {
+  animation: fadeUp 0.9s var(--ease-out-expo) forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.hero-load-2 {
+  animation: fadeUp 0.9s var(--ease-out-expo) forwards;
+  animation-delay: 0.25s;
+  opacity: 0;
+}
+
+.hero-load-3 {
+  animation: fadeUp 0.9s var(--ease-out-expo) forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+.hero-load-4 {
+  animation: fadeUp 0.9s var(--ease-out-expo) forwards;
+  animation-delay: 0.55s;
+  opacity: 0;
+}
+
+.hero-load-5 {
+  animation: fadeUp 0.9s var(--ease-out-expo) forwards;
+  animation-delay: 0.7s;
+  opacity: 0;
+}
+
+.hero-bg-anim {
+  animation: heroZoomIn 2.4s var(--ease-smooth) forwards;
+}
+
+/* Scroll Mouse Icon Animation */
+.scroll-icon-dot {
+  animation: scrollIndicator 1.8s infinite ease-in-out;
+}
+
+/* Pulse Red Notification Indicator */
+.pulse-badge {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-brand-red);
+  animation: pulseRedRing 2s infinite;
+}
+
+/* Smooth Accordion and Details Transitions */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+  opacity: 0;
+}
+
+.accordion-content.is-open {
+  max-height: 400px;
+  opacity: 1;
+}
+
+/* Reduced Motion Override for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+
+/* ==========================================================================
+   ARCHITECTURE INTERIOR DESIGN — MAIN STYLESHEET
+   ========================================================================== */
+
+/* ==========================================================================
+   1. NAVIGATION & HEADER
+   ========================================================================== */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  z-index: 1000;
+  transition: all var(--duration-normal) var(--ease-smooth);
+  background-color: transparent;
+}
+
+.site-header.is-scrolled {
+  height: var(--header-height-scrolled);
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: var(--backdrop-blur-nav);
+  -webkit-backdrop-filter: var(--backdrop-blur-nav);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Brand Logo */
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  z-index: 1002;
+}
+
+.logo-icon-svg {
+  width: 48px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title-arch {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  transition: color var(--duration-normal) ease;
+  line-height: 1.1;
+}
+
+.logo-title-main {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-brand-red);
+  line-height: 1.15;
+}
+
+.logo-tagline {
+  font-family: var(--font-heading);
+  font-size: 0.52rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color var(--duration-normal) ease;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+/* Scrolled Header Text Colors */
+.site-header.is-scrolled .logo-title-arch {
+  color: var(--color-black);
+}
+
+.site-header.is-scrolled .logo-tagline {
+  color: var(--color-gray-text);
+}
+
+/* Desktop Navigation */
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.nav-link {
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  padding: 6px 0;
+  transition: color var(--duration-fast) ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-brand-red);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--duration-normal) var(--ease-smooth);
+}
+
+.nav-link:hover,
+.nav-link.is-active {
+  color: var(--color-white);
+}
+
+.nav-link:hover::after,
+.nav-link.is-active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.site-header.is-scrolled .nav-link {
+  color: var(--color-charcoal);
+}
+
+.site-header.is-scrolled .nav-link:hover,
+.site-header.is-scrolled .nav-link.is-active {
+  color: var(--color-brand-red);
+}
+
+.header-cta-btn {
+  padding: 0.75rem 1.4rem;
+  font-size: 0.75rem;
+}
+
+/* Hamburger Button */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1002;
+  padding: 0;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: var(--color-white);
+  margin: 3px 0;
+  transition: transform var(--duration-normal) var(--ease-smooth),
+              opacity var(--duration-normal) ease,
+              background-color var(--duration-normal) ease;
+  transform-origin: center;
+}
+
+.site-header.is-scrolled .menu-toggle span {
+  background-color: var(--color-black);
+}
+
+.menu-toggle.is-open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+  background-color: var(--color-white) !important;
+}
+
+.menu-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.menu-toggle.is-open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  background-color: var(--color-white) !important;
+}
+
+/* Mobile Slide-Over Drawer */
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  max-width: 420px;
+  height: 100vh;
+  height: 100dvh;
+  background-color: #121212;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(6rem, 12vh, 7.5rem) 2.5rem 3rem;
+  transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.7);
+  overflow-y: auto;
+}
+
+.mobile-drawer.is-open {
+  right: 0;
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-white);
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  transition: color var(--duration-fast) ease, transform var(--duration-fast) ease;
+}
+
+.mobile-nav-link span.num {
+  font-size: 0.85rem;
+  color: var(--color-brand-red);
+  font-weight: 800;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.is-active {
+  color: var(--color-brand-red);
+  transform: translateX(8px);
+}
+
+.mobile-drawer-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.mobile-contact-item {
+  color: #A0A0A0;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.mobile-contact-item a {
+  color: var(--color-white);
+}
+
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.drawer-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ==========================================================================
+   2. HERO SECTION
+   ========================================================================== */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  padding-top: calc(var(--header-height) + 2rem);
+  padding-bottom: 4rem;
+  background-color: var(--color-black);
+  overflow: hidden;
+  color: var(--color-white);
+}
+
+.hero-background-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(17, 17, 17, 0.92) 0%,
+    rgba(17, 17, 17, 0.78) 45%,
+    rgba(17, 17, 17, 0.4) 100%
+  );
+  z-index: 1;
+}
+
+.hero-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 820px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5.5vw, 4.85rem);
+  font-weight: 800;
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+  color: var(--color-white);
+}
+
+.hero-description {
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  line-height: 1.65;
+  color: #D6D6D6;
+  max-width: 620px;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+/* Hero Scroll Indicator */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.scroll-icon-mouse {
+  width: 20px;
+  height: 32px;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+
+.scroll-icon-dot {
+  width: 3px;
+  height: 6px;
+  background-color: var(--color-brand-red);
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   3. ABOUT SECTION
+   ========================================================================== */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.about-lead {
+  font-size: clamp(1.15rem, 1.5vw, 1.35rem);
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--color-black);
+  margin-bottom: 1.5rem;
+}
+
+.about-body-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-gray-text-dark);
+  margin-bottom: 2rem;
+}
+
+.about-stats-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-gray-medium);
+}
+
+.about-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: 800;
+  color: var(--color-brand-red);
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gray-text);
+  margin-top: 4px;
+}
+
+.about-image-wrapper {
+  position: relative;
+}
+
+.about-main-img-card {
+  position: relative;
+  border-radius: var(--border-radius-xs);
+  overflow: hidden;
+  box-shadow: var(--shadow-elevation);
+}
+
+.about-main-img-card img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+}
+
+.about-floating-badge {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  background-color: var(--color-charcoal);
+  color: var(--color-white);
+  padding: 1.5rem;
+  max-width: 240px;
+  box-shadow: var(--shadow-dark);
+  border-left: 3px solid var(--color-brand-red);
+}
+
+.floating-badge-title {
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25rem;
+  color: var(--color-white);
+}
+
+.floating-badge-text {
+  font-size: 0.75rem;
+  color: #B0B0B0;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   4. SERVICES SECTION
+   ========================================================================== */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.service-card {
+  background-color: var(--color-white);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: clamp(2rem, 3.5vw, 3rem);
+  position: relative;
+  transition: all var(--duration-normal) var(--ease-smooth);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: transparent;
+  transition: background-color var(--duration-normal) ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-elevation);
+  border-color: rgba(225, 6, 0, 0.2);
+}
+
+.service-card:hover::before {
+  background-color: var(--color-brand-red);
+}
+
+.service-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.service-number {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--color-brand-red);
+  line-height: 1;
+}
+
+.service-card-icon {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-black);
+  transition: all var(--duration-normal) ease;
+}
+
+.service-card:hover .service-card-icon {
+  background-color: var(--color-brand-red);
+  border-color: var(--color-brand-red);
+  color: var(--color-white);
+}
+
+.service-title {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+  transition: color var(--duration-fast) ease;
+}
+
+.service-card:hover .service-title {
+  color: var(--color-brand-red);
+}
+
+.service-description {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-gray-text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.service-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.6rem;
+  background-color: var(--color-off-white);
+  color: var(--color-charcoal);
+  border-radius: 2px;
+}
+
+.service-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   5. PORTFOLIO SECTION
+   ========================================================================== */
+
+.portfolio-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+.filter-btn {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 0.65rem 1.4rem;
+  background-color: var(--color-white);
+  color: var(--color-charcoal);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all var(--duration-fast) ease;
+}
+
+.filter-btn:hover {
+  background-color: var(--color-off-white);
+  border-color: var(--color-brand-red);
+  color: var(--color-brand-red);
+}
+
+.filter-btn.is-active {
+  background-color: var(--color-black);
+  border-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.75rem;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius-xs);
+  cursor: pointer;
+  background-color: #1a1a1a;
+  transition: transform var(--duration-normal) var(--ease-smooth),
+              box-shadow var(--duration-normal) var(--ease-smooth);
+}
+
+.portfolio-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-elevation);
+}
+
+/* Asymmetric Masonry Spans */
+.portfolio-item.col-span-8 {
+  grid-column: span 8;
+  height: 440px;
+}
+
+.portfolio-item.col-span-4 {
+  grid-column: span 4;
+  height: 440px;
+}
+
+.portfolio-item.col-span-6 {
+  grid-column: span 6;
+  height: 380px;
+}
+
+.portfolio-item.col-span-12 {
+  grid-column: span 12;
+  height: 420px;
+}
+
+.portfolio-item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+
+.portfolio-item:hover .portfolio-item-img {
+  transform: scale(1.06);
+}
+
+.portfolio-item-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(17, 17, 17, 0.92) 0%,
+    rgba(17, 17, 17, 0.4) 50%,
+    rgba(17, 17, 17, 0.1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  z-index: 2;
+  transition: opacity var(--duration-normal) ease;
+}
+
+.portfolio-tag {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-brand-red);
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-item-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+
+.portfolio-item-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  color: #B0B0B0;
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.portfolio-concept-badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 2px 8px;
+  border-radius: 2px;
+  color: #E0E0E0;
+}
+
+/* ==========================================================================
+   6. PROJECT DETAIL LIGHTBOX / MODAL
+   ========================================================================== */
+
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background-color: rgba(10, 10, 10, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 3vw, 2.5rem);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-normal) var(--ease-smooth);
+}
+
+.lightbox-modal.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-dialog {
+  background-color: var(--color-white);
+  max-width: 1000px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: var(--border-radius-xs);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  transform: scale(0.95) translateY(20px);
+  transition: transform var(--duration-normal) var(--ease-smooth);
+}
+
+.lightbox-modal.is-active .lightbox-dialog {
+  transform: scale(1) translateY(0);
+}
+
+.lightbox-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(17, 17, 17, 0.8);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+  transition: background-color var(--duration-fast) ease, transform var(--duration-fast) ease;
+}
+
+.lightbox-close-btn:hover {
+  background-color: var(--color-brand-red);
+  transform: rotate(90deg);
+}
+
+.lightbox-image-side {
+  position: relative;
+  background-color: #000;
+  height: 100%;
+  min-height: 420px;
+}
+
+.lightbox-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lightbox-content-side {
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lightbox-category {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-brand-red);
+  margin-bottom: 0.5rem;
+}
+
+.lightbox-title {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lightbox-description {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-gray-text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.lightbox-spec-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: var(--color-off-white);
+  border-left: 2px solid var(--color-brand-red);\n}\n\n.lightbox-spec-row {\n  display: flex;\n  justify-content: space-between;\n  font-size: 0.85rem;\n}\n\n.lightbox-spec-label {\n  font-weight: 600;\n  color: var(--color-gray-text);\n  text-transform: uppercase;\n  font-size: 0.72rem;\n  letter-spacing: 0.05em;\n}\n\n.lightbox-spec-val {\n  font-weight: 700;\n  color: var(--color-black);\n}\n\n/* ==========================================================================\n   7. PROCESS SECTION\n   ========================================================================== */\n\n.process-timeline {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  gap: 2rem;\n  position: relative;\n  margin-top: 3rem;\n}\n\n.process-step {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  padding-top: 2rem;\n}\n\n.process-step::before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  height: 2px;\n  background-color: var(--color-gray-medium);\n  z-index: 1;\n}\n\n.process-step::after {\n  content: '';\n  position: absolute;\n  top: -4px;\n  left: 0;\n  width: 10px;\n  height: 10px;\n  background-color: var(--color-brand-red);\n  border-radius: 50%;\n  z-index: 2;\n}\n\n.process-num {\n  font-family: var(--font-heading);\n  font-size: 2rem;\n  font-weight: 800;\n  color: var(--color-brand-red);\n  line-height: 1;\n  margin-bottom: 0.75rem;\n}\n\n.process-step-title {\n  font-size: 1.15rem;\n  font-weight: 700;\n  text-transform: uppercase;\n  letter-spacing: 0.02em;\n  margin-bottom: 0.75rem;\n}\n\n.process-step-desc {\n  font-size: 0.9rem;\n  line-height: 1.6;\n  color: var(--color-gray-text-dark);\n}\n\n/* ==========================================================================\n   8. TESTIMONIALS SECTION\n   ========================================================================== */\n\n.google-rating-badge {\n  display: inline-flex;\n  align-items: center;\n  gap: 0.75rem;\n  padding: 0.75rem 1.5rem;\n  background-color: var(--color-white);\n  border: 1px solid rgba(0, 0, 0, 0.08);\n  border-radius: 4px;\n  box-shadow: var(--shadow-subtle);\n  margin-bottom: 3rem;\n}\n\n.rating-stars {\n  color: #FFB800;\n  font-size: 1.1rem;\n  letter-spacing: 2px;\n}\n\n.rating-text {\n  font-family: var(--font-heading);\n  font-size: 0.875rem;\n  font-weight: 700;\n  color: var(--color-black);\n}\n\n.testimonials-grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 2rem;\n}\n\n.testimonial-card {\n  background-color: var(--color-white);\n  padding: clamp(2rem, 3vw, 2.75rem);\n  border: 1px solid rgba(0, 0, 0, 0.06);\n  border-radius: var(--border-radius-xs);\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  position: relative;\n  box-shadow: var(--shadow-subtle);\n  transition: transform var(--duration-normal) ease, box-shadow var(--duration-normal) ease;\n}\n\n.testimonial-card:hover {\n  transform: translateY(-4px);\n  box-shadow: var(--shadow-medium);\n}\n\n.testimonial-quote-icon {\n  font-family: Georgia, serif;\n  font-size: 3.5rem;\n  line-height: 1;\n  color: var(--color-brand-red);\n  opacity: 0.35;\n  margin-bottom: -1rem;\n}\n\n.testimonial-text {\n  font-size: 0.95rem;\n  line-height: 1.7;\n  color: var(--color-charcoal);\n  margin-bottom: 2rem;\n  font-style: normal;\n}\n\n.testimonial-author {\n  border-top: 1px solid var(--color-gray-light);\n  padding-top: 1rem;\n}\n\n.author-name {\n  font-family: var(--font-heading);\n  font-size: 1rem;\n  font-weight: 700;\n  color: var(--color-black);\n  text-transform: uppercase;\n  letter-spacing: 0.04em;\n}\n\n.author-role {\n  font-size: 0.8125rem;\n  color: var(--color-gray-text);\n  margin-top: 2px;\n}\n\n/* ==========================================================================\n   9. DRAMATIC CTA SECTION\n   ========================================================================== */\n\n.cta-banner {\n  background: radial-gradient(circle at top right, #242424 0%, #111111 100%);\n  padding: clamp(4.5rem, 7vw, 6.5rem) 0;\n  border-top: 1px solid rgba(255, 255, 255, 0.08);\n  border-bottom: 1px solid rgba(255, 255, 255, 0.08);\n  position: relative;\n  overflow: hidden;\n}\n\n.cta-banner::before {\n  content: '';\n  position: absolute;\n  top: 0;\n  right: 0;\n  width: 400px;\n  height: 100%;\n  background-image: \n    linear-gradient(to right, rgba(225, 6, 0, 0.05) 1px, transparent 1px),\n    linear-gradient(to bottom, rgba(225, 6, 0, 0.05) 1px, transparent 1px);\n  background-size: 40px 40px;\n  pointer-events: none;\n}\n\n.cta-content-wrapper {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 3rem;\n  flex-wrap: wrap;\n}\n\n.cta-text-side {\n  max-width: 650px;\n}\n\n.cta-heading {\n  font-size: clamp(2rem, 4vw, 3.25rem);\n  font-weight: 800;\n  color: var(--color-white);\n  text-transform: uppercase;\n  line-height: 1.1;\n  margin-bottom: 1rem;\n}\n\n.cta-subtitle {\n  font-size: 1.1rem;\n  color: #C0C0C0;\n  line-height: 1.6;\n}\n\n.cta-buttons-side {\n  display: flex;\n  align-items: center;\n  gap: 1.25rem;\n  flex-wrap: wrap;\n}\n\n/* ==========================================================================\n   10. CONTACT & INQUIRY SECTION\n   ========================================================================== */\n\n.contact-layout-grid {\n  display: grid;\n  grid-template-columns: 1fr 1.2fr;\n  gap: clamp(2.5rem, 5vw, 5rem);\n  align-items: flex-start;\n}\n\n.contact-info-panel {\n  display: flex;\n  flex-direction: column;\n  gap: 2rem;\n}\n\n.contact-card-item {\n  display: flex;\n  align-items: flex-start;\n  gap: 1.25rem;\n}\n\n.contact-card-icon {\n  width: 44px;\n  height: 44px;\n  background-color: var(--color-white);\n  border: 1px solid rgba(0, 0, 0, 0.08);\n  border-radius: 2px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: var(--color-brand-red);\n  flex-shrink: 0;\n  box-shadow: var(--shadow-subtle);\n}\n\n.contact-card-label {\n  font-family: var(--font-heading);\n  font-size: 0.75rem;\n  font-weight: 700;\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  color: var(--color-gray-text);\n  margin-bottom: 4px;\n}\n\n.contact-card-value {\n  font-size: 1rem;\n  font-weight: 600;\n  color: var(--color-black);\n}\n\n.contact-card-value a:hover {\n  color: var(--color-brand-red);\n}\n\n/* Karachi Location Map Card */\n.map-locator-card {\n  margin-top: 1rem;\n  background: var(--color-white);\n  border: 1px solid rgba(0, 0, 0, 0.08);\n  padding: 1.5rem;\n  border-radius: var(--border-radius-xs);\n  box-shadow: var(--shadow-subtle);\n}\n\n.map-locator-header {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  margin-bottom: 1rem;\n}\n\n.map-preview-box {\n  position: relative;\n  height: 180px;\n  background-color: #e5e3df;\n  border-radius: 2px;\n  overflow: hidden;\n  margin-bottom: 1.25rem;\n}\n\n.map-mock-bg {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  filter: grayscale(40%) contrast(1.1);\n}\n\n.map-pin-pulse {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.pin-icon {\n  color: var(--color-brand-red);\n  font-size: 1.75rem;\n  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));\n}\n\n/* Contact Form */\n.contact-form-panel {\n  background-color: var(--color-white);\n  border: 1px solid rgba(0, 0, 0, 0.06);\n  padding: clamp(2rem, 4vw, 3.5rem);\n  border-radius: var(--border-radius-xs);\n  box-shadow: var(--shadow-medium);\n}\n\n.form-title {\n  font-size: var(--text-2xl);\n  font-weight: 800;\n  text-transform: uppercase;\n  margin-bottom: 0.5rem;\n}\n\n.form-subtitle {\n  font-size: 0.9rem;\n  color: var(--color-gray-text);\n  margin-bottom: 2rem;\n}\n\n.form-group-row {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 1.25rem;\n  margin-bottom: 1.25rem;\n}\n\n.form-group {\n  display: flex;\n  flex-direction: column;\n  margin-bottom: 1.25rem;\n}\n\n.form-label {\n  font-family: var(--font-heading);\n  font-size: 0.75rem;\n  font-weight: 700;\n  text-transform: uppercase;\n  letter-spacing: 0.08em;\n  color: var(--color-charcoal);\n  margin-bottom: 0.5rem;\n}\n\n.form-input,\n.form-select,\n.form-textarea {\n  width: 100%;\n  padding: 0.85rem 1rem;\n  background-color: var(--color-off-white);\n  border: 1px solid rgba(0, 0, 0, 0.12);\n  border-radius: 2px;\n  font-size: 0.95rem;\n  color: var(--color-black);\n  transition: border-color var(--duration-fast) ease, background-color var(--duration-fast) ease;\n}\n\n.form-input:focus,\n.form-select:focus,\n.form-textarea:focus {\n  border-color: var(--color-brand-red);\n  background-color: var(--color-white);\n  outline: none;\n}\n\n.form-textarea {\n  resize: vertical;\n  min-height: 120px;\n}\n\n.form-status-msg {\n  display: none;\n  padding: 1rem;\n  border-radius: 2px;\n  font-size: 0.9rem;\n  margin-top: 1rem;\n}\n\n.form-status-msg.is-success {\n  display: block;\n  background-color: #E8F5E9;\n  color: #2E7D32;\n  border: 1px solid #A5D6A7;\n}\n\n/* ==========================================================================\n   11. PROJECT ESTIMATE MODAL (\"START A PROJECT\")\n   ========================================================================== */\n\n.estimate-modal {\n  position: fixed;\n  inset: 0;\n  z-index: 2100;\n  background-color: rgba(10, 10, 10, 0.88);\n  backdrop-filter: blur(12px);\n  -webkit-backdrop-filter: blur(12px);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: clamp(1rem, 3vw, 2.5rem);\n  opacity: 0;\n  pointer-events: none;\n  transition: opacity var(--duration-normal) var(--ease-smooth);\n}\n\n.estimate-modal.is-active {\n  opacity: 1;\n  pointer-events: auto;\n}\n\n.estimate-dialog {\n  background-color: var(--color-white);\n  max-width: 680px;\n  width: 100%;\n  max-height: 90vh;\n  overflow-y: auto;\n  border-radius: var(--border-radius-xs);\n  padding: clamp(2rem, 4vw, 3rem);\n  position: relative;\n  box-shadow: var(--shadow-dark);\n  transform: scale(0.95);\n  transition: transform var(--duration-normal) var(--ease-smooth);\n}\n\n.estimate-modal.is-active .estimate-dialog {\n  transform: scale(1);\n}\n\n/* ==========================================================================\n   12. FOOTER\n   ========================================================================== */\n\n.site-footer {\n  background-color: var(--color-black);\n  color: var(--color-white);\n  padding-top: clamp(4rem, 6vw, 6rem);\n  padding-bottom: 2.5rem;\n  border-top: 1px solid rgba(255, 255, 255, 0.08);\n}\n\n.footer-top-grid {\n  display: grid;\n  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;\n  gap: clamp(2rem, 4vw, 4rem);\n  margin-bottom: 4rem;\n}\n\n.footer-brand-side p {\n  color: #A0A0A0;\n  font-size: 0.9rem;\n  line-height: 1.6;\n  margin-top: 1rem;\n  max-width: 320px;\n}\n\n.footer-column-title {\n  font-family: var(--font-heading);\n  font-size: 0.85rem;\n  font-weight: 700;\n  text-transform: uppercase;\n  letter-spacing: 0.12em;\n  color: var(--color-white);\n  margin-bottom: 1.25rem;\n  position: relative;\n  padding-bottom: 0.5rem;\n}\n\n.footer-column-title::after {\n  content: '';\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 24px;\n  height: 2px;\n  background-color: var(--color-brand-red);\n}\n\n.footer-link-list {\n  display: flex;\n  flex-direction: column;\n  gap: 0.75rem;\n}\n\n.footer-link-list a {\n  color: #B0B0B0;\n  font-size: 0.875rem;\n  transition: color var(--duration-fast) ease, transform var(--duration-fast) ease;\n  display: inline-block;\n}\n\n.footer-link-list a:hover {\n  color: var(--color-brand-red);\n  transform: translateX(4px);\n}\n\n.footer-bottom-bar {\n  border-top: 1px solid rgba(255, 255, 255, 0.08);\n  padding-top: 2rem;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  flex-wrap: wrap;\n  gap: 1rem;\n  font-size: 0.8125rem;\n  color: #7A7A7A;\n}\n\n.footer-bottom-bar a:hover {\n  color: var(--color-brand-red);\n}\n\n/* ==========================================================================\n   DYNAMIC WHATSAPP ATTENTION & FLOATING POPUP SYSTEM\n   ========================================================================== */\n\n.floating-whatsapp-container {\n  position: fixed;\n  bottom: 2rem;\n  right: 2rem;\n  z-index: 990;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-end;\n  pointer-events: none;\n}\n\n/* 1. Dynamic WhatsApp Floating Trigger Button */\n.floating-whatsapp-widget {\n  pointer-events: auto;\n  position: relative;\n  display: flex;\n  align-items: center;\n  gap: 0.75rem;\n  background-color: #25D366;\n  color: #FFFFFF;\n  padding: 0.85rem 1.35rem;\n  border-radius: 40px;\n  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45);\n  font-family: var(--font-heading);\n  font-size: 0.8125rem;\n  font-weight: 700;\n  text-transform: uppercase;\n  letter-spacing: 0.06em;\n  text-decoration: none;\n  cursor: pointer;\n  border: none;\n  animation: waRippleRing 3s infinite ease-out;\n  transition: transform var(--duration-normal) var(--ease-smooth),\n              box-shadow var(--duration-normal) ease,\n              background-color var(--duration-fast) ease;\n}\n\n.floating-whatsapp-widget:hover {\n  background-color: #1EBE5D;\n  transform: translateY(-4px) scale(1.03);\n  box-shadow: 0 14px 34px rgba(37, 211, 102, 0.6);\n  color: #FFFFFF;\n}\n\n/* Attention Grabber Trigger Class (Executed periodically via JS) */\n.floating-whatsapp-widget.is-wiggling {\n  animation: waAttentionPop 0.85s ease-in-out, waRippleRing 2s infinite ease-out;\n}\n\n/* Unread Message Notification Badge */\n.wa-unread-badge {\n  position: absolute;\n  top: -6px;\n  right: -4px;\n  background-color: var(--color-brand-red);\n  color: #FFFFFF;\n  font-family: var(--font-heading);\n  font-size: 0.7rem;\n  font-weight: 800;\n  width: 22px;\n  height: 22px;\n  border-radius: 50%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border: 2px solid #FFFFFF;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);\n  animation: waBadgePing 2.4s infinite ease-in-out;\n}\n\n/* 2. Dynamic Floating Popup Card */\n.wa-popup-card {\n  pointer-events: auto;\n  width: 320px;\n  background-color: var(--color-white);\n  border-radius: 12px;\n  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);\n  border: 1px solid rgba(0, 0, 0, 0.08);\n  margin-bottom: 1rem;\n  overflow: hidden;\n  opacity: 0;\n  visibility: hidden;\n  transform: translateY(18px) scale(0.92);\n  transform-origin: bottom right;\n  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),\n              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),\n              visibility 0.4s;\n}\n\n.wa-popup-card.is-visible {\n  opacity: 1;\n  visibility: visible;\n  transform: translateY(0) scale(1);\n}\n\n.wa-popup-header {\n  background: linear-gradient(135deg, #111111 0%, #1C1C1C 100%);\n  color: #FFFFFF;\n  padding: 1rem 1.25rem;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  border-bottom: 2px solid var(--color-brand-red);\n}\n\n.wa-header-profile {\n  display: flex;\n  align-items: center;\n  gap: 0.75rem;\n}\n\n.wa-avatar {\n  width: 36px;\n  height: 36px;\n  background-color: var(--color-charcoal-light);\n  border: 1.5px solid var(--color-brand-red);\n  border-radius: 50%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: #FFFFFF;\n  font-size: 1rem;\n  position: relative;\n}\n\n.wa-avatar-online {\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  width: 10px;\n  height: 10px;\n  background-color: #25D366;\n  border: 2px solid #111;\n  border-radius: 50%;\n}\n\n.wa-header-info {\n  display: flex;\n  flex-direction: column;\n}\n\n.wa-header-name {\n  font-family: var(--font-heading);\n  font-size: 0.82rem;\n  font-weight: 700;\n  color: #FFFFFF;\n  line-height: 1.2;\n}\n\n.wa-header-status {\n  font-size: 0.68rem;\n  color: #25D366;\n  font-weight: 600;\n}\n\n.wa-popup-close-btn {\n  background: transparent;\n  border: none;\n  color: #888888;\n  font-size: 1.1rem;\n  cursor: pointer;\n  padding: 4px;\n  transition: color var(--duration-fast) ease;\n  line-height: 1;\n}\n\n.wa-popup-close-btn:hover {\n  color: #FFFFFF;\n}\n\n.wa-popup-body {\n  padding: 1.25rem;\n  background-color: #FAFAF9;\n}\n\n.wa-message-bubble {\n  background-color: #FFFFFF;\n  border: 1px solid rgba(0, 0, 0, 0.06);\n  padding: 0.85rem 1rem;\n  border-radius: 4px 12px 12px 12px;\n  font-size: 0.85rem;\n  line-height: 1.5;\n  color: var(--color-charcoal);\n  margin-bottom: 1rem;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);\n}\n\n.wa-chips-title {\n  font-family: var(--font-heading);\n  font-size: 0.7rem;\n  font-weight: 700;\n  text-transform: uppercase;\n  letter-spacing: 0.06em;\n  color: var(--color-gray-text);\n  margin-bottom: 0.5rem;\n}\n\n.wa-chips-list {\n  display: flex;\n  flex-direction: column;\n  gap: 0.4rem;\n}\n\n.wa-chip-btn {\n  text-align: left;\n  background-color: #FFFFFF;\n  border: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 0.55rem 0.85rem;\n  border-radius: 6px;\n  font-size: 0.78rem;\n  font-weight: 600;\n  color: var(--color-black);\n  cursor: pointer;\n  transition: all var(--duration-fast) ease;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.wa-chip-btn:hover {\n  background-color: #E8F5E9;\n  border-color: #25D366;\n  color: #128C7E;\n  transform: translateX(4px);\n}\n\n.wa-chip-arrow {\n  color: #25D366;\n  font-weight: 700;\n}\n\n.wa-popup-footer {\n  padding: 0.75rem 1.25rem;\n  background-color: #FFFFFF;\n  border-top: 1px solid rgba(0, 0, 0, 0.05);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.wa-direct-chat-link {\n  font-family: var(--font-heading);\n  font-size: 0.75rem;\n  font-weight: 700;\n  text-transform: uppercase;\n  letter-spacing: 0.06em;\n  color: #128C7E;\n  display: inline-flex;\n  align-items: center;\n  gap: 0.35rem;\n}\n\n.wa-direct-chat-link:hover {\n  color: #075E54;\n  text-decoration: underline;\n}\n\n/* ==========================================================================\n   13. RESPONSIVE BREAKPOINTS\n   ========================================================================== */\n\n@media (max-width: 1080px) {\n  .services-grid {\n    grid-template-columns: 1fr;\n  }\n  \n  .portfolio-grid {\n    gap: 1.25rem;\n  }\n  \n  .portfolio-item.col-span-8,\n  .portfolio-item.col-span-4,\n  .portfolio-item.col-span-6,\n  .portfolio-item.col-span-12 {\n    grid-column: span 6;\n    height: 360px;\n  }\n  \n  .process-timeline {\n    grid-template-columns: repeat(2, 1fr);\n    gap: 2.5rem;\n  }\n  \n  .testimonials-grid {\n    grid-template-columns: 1fr;\n  }\n  \n  .footer-top-grid {\n    grid-template-columns: repeat(2, 1fr);\n  }\n  \n  .contact-layout-grid {\n    grid-template-columns: 1fr;\n  }\n}\n\n@media (max-width: 860px) {\n  .nav-desktop,\n  .header-cta-btn {\n    display: none;\n  }\n  \n  .menu-toggle {\n    display: flex;\n  }\n  \n  .about-grid {\n    grid-template-columns: 1fr;\n  }\n  \n  .about-main-img-card img {\n    height: 380px;\n  }\n  \n  .about-floating-badge {\n    position: static;\n    margin-top: 1rem;\n    max-width: 100%;\n  }\n  \n  .lightbox-dialog {\n    grid-template-columns: 1fr;\n  }\n  \n  .lightbox-image-side {\n    min-height: 280px;\n    height: 280px;\n  }\n}\n\n@media (max-width: 640px) {\n  .hero-actions {\n    flex-direction: column;\n    align-items: stretch;\n  }\n  \n  .hero-actions .btn {\n    width: 100%;\n  }\n  \n  .portfolio-item.col-span-8,\n  .portfolio-item.col-span-4,\n  .portfolio-item.col-span-6,\n  .portfolio-item.col-span-12 {\n    grid-column: span 12;\n    height: 320px;\n  }\n  \n  .process-timeline {\n    grid-template-columns: 1fr;\n  }\n  \n  .form-group-row {\n    grid-template-columns: 1fr;\n  }\n  \n  .footer-top-grid {\n    grid-template-columns: 1fr;\n    gap: 2.5rem;\n  }\n  \n  .floating-whatsapp-widget span {\n    display: none;\n  }\n  \n  .floating-whatsapp-widget {\n    padding: 0.85rem;\n    border-radius: 50%;\n    bottom: 1.25rem;\n    right: 1.25rem;\n  }\n}\n  </style>\n</head>\n<body>\n\n  <!-- ==========================================================================\n       HEADER & NAVIGATION\n       ========================================================================== -->\n  <header class=\"site-header\" id=\"siteHeader\">\n    <div class=\"container header-container\">\n      \n      <!-- Brand Logo -->\n      <a href=\"#home\" class=\"brand-logo\" aria-label=\"Architecture Interior Design Home\">\n        <svg class=\"logo-icon-svg\" viewBox=\"0 0 240 180\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\">\n          <g stroke=\"#E10600\" stroke-width=\"1.8\" stroke-linecap=\"round\">\n            <path d=\"M165 24 L195 30 L195 98 L165 98 Z\" stroke-width=\"2\" fill=\"none\"/>\n            <line x1=\"171\" y1=\"25.5\" x2=\"171\" y2=\"98\" />\n            <line x1=\"177\" y1=\"26.8\" x2=\"177\" y2=\"98\" />\n            <line x1=\"183\" y1=\"28\" x2=\"183\" y2=\"98\" />\n            <line x1=\"189\" y1=\"29\" x2=\"189\" y2=\"98\" />\n          </g>\n          <path d=\"M48 20 L175 44 L175 62 L64 41 L64 78 L48 78 Z\" fill=\"#E10600\" />\n          <g stroke=\"#E10600\" stroke-width=\"1.8\" fill=\"none\">\n            <path d=\"M64 45 L166 64 L166 84 L64 66 Z\" />\n            <line x1=\"104\" y1=\"52.5\" x2=\"104\" y2=\"72.5\" />\n            <line x1=\"136\" y1=\"58.5\" x2=\"136\" y2=\"78.5\" />\n            <path d=\"M64 54 L166 73\" stroke-width=\"1.3\" />\n          </g>\n          <g stroke=\"#E10600\" stroke-width=\"1.6\">\n            <path d=\"M48 78 L78 78 L78 114 L48 114 Z\" stroke-width=\"2\" fill=\"none\"/>\n            <line x1=\"53\" y1=\"78\" x2=\"53\" y2=\"114\" />\n            <line x1=\"58\" y1=\"78\" x2=\"58\" y2=\"114\" />\n            <line x1=\"63\" y1=\"78\" x2=\"63\" y2=\"114\" />\n            <line x1=\"68\" y1=\"78\" x2=\"68\" y2=\"114\" />\n            <line x1=\"73\" y1=\"78\" x2=\"73\" y2=\"114\" />\n          </g>\n          <g>\n            <path d=\"M78 70 L180 77 L180 118 L78 116 Z\" stroke=\"#E10600\" stroke-width=\"2.8\" fill=\"none\" />\n            <rect x=\"85\" y=\"77\" width=\"26\" height=\"34\" fill=\"#E10600\" rx=\"0.5\" />\n            <rect x=\"115\" y=\"79\" width=\"28\" height=\"33\" fill=\"#E10600\" rx=\"0.5\" />\n            <rect x=\"147\" y=\"81\" width=\"27\" height=\"31\" fill=\"#E10600\" rx=\"0.5\" />\n          </g>\n          <g stroke=\"#E10600\" stroke-linecap=\"round\">\n            <line x1=\"42\" y1=\"124\" x2=\"200\" y2=\"124\" stroke-width=\"2.2\" />\n            <line x1=\"48\" y1=\"128\" x2=\"194\" y2=\"128\" stroke-width=\"1.3\" />\n          </g>\n        </svg>\n\n        <div class=\"logo-text-group\">\n          <span class=\"logo-title-arch\">ARCHITECTURE</span>\n          <span class=\"logo-title-main\">INTERIOR DESIGN</span>\n          <span class=\"logo-tagline\">Where Vision Meets Reality</span>\n        </div>\n      </a>\n\n      <!-- Desktop Navigation Menu -->\n      <nav class=\"nav-desktop\" aria-label=\"Main Navigation\">\n        <a href=\"#home\" class=\"nav-link is-active\">Home</a>\n        <a href=\"#about\" class=\"nav-link\">About</a>\n        <a href=\"#services\" class=\"nav-link\">Services</a>\n        <a href=\"#portfolio\" class=\"nav-link\">Projects</a>\n        <a href=\"#process\" class=\"nav-link\">Process</a>\n        <a href=\"#reviews\" class=\"nav-link\">Reviews</a>\n        <a href=\"#contact\" class=\"nav-link\">Contact</a>\n      </nav>\n\n      <!-- Header CTA Button -->\n      <div class=\"header-cta-group\">\n        <a href=\"#contact\" class=\"btn btn-primary header-cta-btn js-open-estimate\">\n          <span>Start Your Project</span>\n          <span class=\"btn-icon-arrow\">→</span>\n        </a>\n      </div>\n\n      <!-- Hamburger Menu Toggle (Mobile) -->\n      <button class=\"menu-toggle\" id=\"menuToggle\" aria-label=\"Toggle Mobile Menu\" aria-expanded=\"false\">\n        <span></span>\n        <span></span>\n        <span></span>\n      </button>\n\n    </div>\n  </header>\n\n  <!-- Mobile Drawer -->\n  <div class=\"drawer-backdrop\" id=\"drawerBackdrop\"></div>\n  <aside class=\"mobile-drawer\" id=\"mobileDrawer\" aria-label=\"Mobile Navigation Drawer\">\n    <div class=\"mobile-drawer-header\">\n      <nav class=\"mobile-nav-list\">\n        <a href=\"#home\" class=\"mobile-nav-link\"><span class=\"num\">01</span> Home</a>\n        <a href=\"#about\" class=\"mobile-nav-link\"><span class=\"num\">02</span> About</a>\n        <a href=\"#services\" class=\"mobile-nav-link\"><span class=\"num\">03</span> Services</a>\n        <a href=\"#portfolio\" class=\"mobile-nav-link\"><span class=\"num\">04</span> Projects</a>\n        <a href=\"#process\" class=\"mobile-nav-link\"><span class=\"num\">05</span> Process</a>\n        <a href=\"#reviews\" class=\"mobile-nav-link\"><span class=\"num\">06</span> Testimonials</a>\n        <a href=\"#contact\" class=\"mobile-nav-link\"><span class=\"num\">07</span> Contact</a>\n      </nav>\n    </div>\n    <div class=\"mobile-drawer-footer\">\n      <div class=\"mobile-contact-item\">\n        <strong>Direct Call / WhatsApp:</strong><br>\n        <a href=\"tel:+923333001231\">+92 333 3001231</a>\n      </div>\n      <div class=\"mobile-contact-item\">\n        <strong>Email:</strong><br>\n        <a href=\"mailto:architectureinteriordesign@gmail.com\">architectureinteriordesign@gmail.com</a>\n      </div>\n      <div class=\"mobile-contact-item\">\n        <small>Shahrah-e-Faisal Rd, Block 2 P.E.C.H.S., Karachi</small>\n      </div>\n      <a href=\"#contact\" class=\"btn btn-primary\" style=\"width: 100%; margin-top: 1.5rem;\" onclick=\"document.getElementById('drawerBackdrop').click()\">\n        Start Your Project →\n      </a>\n    </div>\n  </aside>\n\n  <!-- Main Content -->\n  <main id=\"mainContent\">\n    <!-- HERO SECTION -->\n    <section class=\"hero-section\" id=\"home\">\n      <div class=\"hero-background-wrapper\">\n        <img \n          src=\"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85\" \n          alt=\"Modern Architectural Design in Karachi\" \n          class=\"hero-bg-img hero-bg-anim\"\n        >\n      </div>\n      <div class=\"hero-overlay\"></div>\n      <div class=\"hero-grid-overlay\"></div>\n\n      <div class=\"container\">\n        <div class=\"hero-content\">\n          <div class=\"hero-badge hero-load-1\">\n            <span>Architecture • Interior • Construction</span>\n          </div>\n          <h1 class=\"hero-title hero-load-2\">\n            WHERE VISION<br>\n            <span class=\"text-red\">MEETS REALITY</span>\n          </h1>\n          <p class=\"hero-description hero-load-3\">\n            We create innovative and functional spaces that reflect the unique vision of every client — blending aesthetics, practicality, and quality in Karachi.\n          </p>\n          <div class=\"hero-actions hero-load-4\">\n            <a href=\"#portfolio\" class=\"btn btn-primary\">\n              <span>Explore Our Work</span>\n              <span class=\"btn-icon-arrow\">↓</span>\n            </a>\n            <a href=\"#contact\" class=\"btn btn-outline-white js-open-estimate\">\n              <span>Start a Project →</span>\n            </a>\n          </div>\n        </div>\n      </div>\n\n      <a href=\"#about\" class=\"hero-scroll-indicator hero-load-5\" aria-label=\"Scroll To Explore\">\n        <div class=\"scroll-icon-mouse\">\n          <div class=\"scroll-icon-dot\"></div>\n        </div>\n        <span>Scroll To Explore</span>\n      </a>\n    </section>\n\n    <!-- ABOUT SECTION -->\n    <section class=\"section section-white arch-grid-bg\" id=\"about\">\n      <div class=\"container\">\n        <div class=\"about-grid\">\n          <div class=\"about-text-column reveal reveal-left\">\n            <span class=\"eyebrow\">Studio Overview</span>\n            <h2 class=\"section-title\">DESIGNING SPACES<br><span class=\"text-red\">THAT INSPIRE</span></h2>\n            <p class=\"about-lead\">\n              As an Architectural Designer, I specialize in creating innovative and functional spaces that reflect the unique vision of each client. With a passion for design and a commitment to quality, I blend aesthetics with practicality to transform both residential and commercial environments.\n            </p>\n            <p class=\"about-body-text\">\n              My philosophy revolves around collaboration and understanding. I believe that every project begins with listening—truly grasping my clients' needs and aspirations. By fostering open communication and incorporating sustainable practices, I aim to deliver designs that not only meet expectations but also enhance the overall experience of the space.\n            </p>\n            <div class=\"about-stats-strip\">\n              <div class=\"about-stat-item\">\n                <span class=\"stat-value stat-counter\" data-target=\"4.5\" data-decimal=\"true\">4.5</span>\n                <span class=\"stat-label\">Google Rating (19 Reviews)</span>\n              </div>\n              <div class=\"about-stat-item\">\n                <span class=\"stat-value\">Karachi</span>\n                <span class=\"stat-label\">P.E.C.H.S. Studio</span>\n              </div>\n              <div class=\"about-stat-item\">\n                <span class=\"stat-value\">End-to-End</span>\n                <span class=\"stat-label\">Concept to Turnkey</span>\n              </div>\n            </div>\n            <div style=\"margin-top: 2.5rem;\">\n              <a href=\"#contact\" class=\"link-editorial js-open-estimate\">\n                <span>Book a Consultation</span>\n                <span>→</span>\n              </a>\n            </div>\n          </div>\n\n          <div class=\"about-image-column reveal reveal-right delay-200\">\n            <div class=\"about-image-wrapper\">\n              <div class=\"about-main-img-card clip-reveal-wrap\">\n                <img \n                  src=\"https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=85\" \n                  alt=\"Architectural Designer Studio Discussion in Karachi\"\n                  loading=\"lazy\"\n                >\n              </div>\n              <div class=\"about-floating-badge\">\n                <h4 class=\"floating-badge-title\">Karachi Studio</h4>\n                <p class=\"floating-badge-text\">\n                  Shahrah-e-Faisal Rd, Block 2 P.E.C.H.S., Karachi.<br>\n                  <strong>Open Daily:</strong> 10:00 AM – 6:00 PM\n                </p>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n\n    <!-- SERVICES SECTION -->\n    <section class=\"section section-dark\" id=\"services\">\n      <div class=\"container\">\n        <div class=\"section-header text-center reveal reveal-up\">\n          <span class=\"eyebrow eyebrow-dark\">Expertise & Disciplines</span>\n          <h2 class=\"section-title text-white\">WHAT WE DO</h2>\n          <p class=\"section-subtitle text-muted\">\n            From concept to completion, we create spaces designed around people, purpose and possibility.\n          </p>\n        </div>\n\n        <div class=\"services-grid\">\n          <!-- 01 Residential -->\n          <article class=\"service-card reveal reveal-up delay-100\">\n            <div>\n              <div class=\"service-header\">\n                <span class=\"service-number\">01</span>\n                <div class=\"service-card-icon\" aria-hidden=\"true\">\n                  <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\">\n                    <path d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>\n                    <polyline points=\"9 22 9 12 15 12 15 22\"/>\n                  </svg>\n                </div>\n              </div>\n              <h3 class=\"service-title\">RESIDENTIAL DESIGN</h3>\n              <p class=\"service-description\">\n                Comprehensive residential design including custom homes, renovations and interior design. Every space is tailored to the personality, lifestyle and requirements of the homeowner.\n              </p>\n              <div class=\"service-tags\">\n                <span class=\"service-tag\">Custom Villas</span>\n                <span class=\"service-tag\">Full Home Renovations</span>\n                <span class=\"service-tag\">Luxury Living Suites</span>\n                <span class=\"service-tag\">Modular Kitchens</span>\n              </div>\n            </div>\n            <div class=\"service-footer\">\n              <a href=\"#contact\" class=\"link-editorial js-open-estimate\" data-service=\"Residential Design\">\n                <span>Request Residential Quote</span>\n                <span>→</span>\n              </a>\n              <span class=\"arch-number\" style=\"font-size: 0.85rem; color: #888;\">Concept to Build</span>\n            </div>\n          </article>\n\n          <!-- 02 Commercial -->\n          <article class=\"service-card reveal reveal-up delay-200\">\n            <div>\n              <div class=\"service-header\">\n                <span class=\"service-number\">02</span>\n                <div class=\"service-card-icon\" aria-hidden=\"true\">\n                  <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\">\n                    <rect x=\"2\" y=\"7\" width=\"20\" height=\"14\" rx=\"2\" ry=\"2\"/>\n                    <path d=\"M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16\"/>\n                  </svg>\n                </div>\n              </div>\n              <h3 class=\"service-title\">COMMERCIAL DESIGN</h3>\n              <p class=\"service-description\">\n                Dynamic and efficient environments for offices, retail establishments and hospitality projects, designed to strengthen brand identity and improve customer and employee experience.\n              </p>\n              <div class=\"service-tags\">\n                <span class=\"service-tag\">Corporate Headquarters</span>\n                <span class=\"service-tag\">Retail Flagships</span>\n                <span class=\"service-tag\">Clinics & Wellness</span>\n                <span class=\"service-tag\">Hospitality Interiors</span>\n              </div>\n            </div>\n            <div class=\"service-footer\">\n              <a href=\"#contact\" class=\"link-editorial js-open-estimate\" data-service=\"Commercial Design\">\n                <span>Request Commercial Quote</span>\n                <span>→</span>\n              </a>\n              <span class=\"arch-number\" style=\"font-size: 0.85rem; color: #888;\">Brand-Aligned</span>\n            </div>\n          </article>\n\n          <!-- 03 Civil Contractor Services -->\n          <article class=\"service-card reveal reveal-up delay-300\">\n            <div>\n              <div class=\"service-header\">\n                <span class=\"service-number\">03</span>\n                <div class=\"service-card-icon\" aria-hidden=\"true\">\n                  <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\">\n                    <path d=\"M2 22h20\"/>\n                    <path d=\"M6 18H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2\"/>\n                    <path d=\"M18 18h2a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2\"/>\n                    <rect x=\"6\" y=\"2\" width=\"12\" height=\"20\" rx=\"2\"/>\n                  </svg>\n                </div>\n              </div>\n              <h3 class=\"service-title\">CIVIL CONTRACTOR SERVICES</h3>\n              <p class=\"service-description\">\n                Comprehensive construction services including project management, site supervision and quality control, with a focus on quality workmanship, timelines and budgets.\n              </p>\n              <div class=\"service-tags\">\n                <span class=\"service-tag\">Site Supervision</span>\n                <span class=\"service-tag\">Structural Engineering</span>\n                <span class=\"service-tag\">Quality Control</span>\n                <span class=\"service-tag\">Budget & Timeline Adherence</span>\n              </div>\n            </div>\n            <div class=\"service-footer\">\n              <a href=\"#contact\" class=\"link-editorial js-open-estimate\" data-service=\"Civil Contractor\">\n                <span>Request Civil Contracting</span>\n                <span>→</span>\n              </a>\n              <span class=\"arch-number\" style=\"font-size: 0.85rem; color: #888;\">Engineered Quality</span>\n            </div>\n          </article>\n\n          <!-- 04 3D Visualization -->\n          <article class=\"service-card reveal reveal-up delay-400\">\n            <div>\n              <div class=\"service-header\">\n                <span class=\"service-number\">04</span>\n                <div class=\"service-card-icon\" aria-hidden=\"true\">\n                  <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\">\n                    <polygon points=\"12 2 2 7 12 12 22 7 12 2\"/>\n                    <polyline points=\"2 17 12 22 22 17\"/>\n                    <polyline points=\"2 12 12 17 22 12\"/>\n                  </svg>\n                </div>\n              </div>\n              <h3 class=\"service-title\">3D VISUALIZATION & MODELING</h3>\n              <p class=\"service-description\">\n                High-end photorealistic 3D rendering and architectural animations that allow clients to visualize texture, lighting, and materiality prior to construction.\n              </p>\n              <div class=\"service-tags\">\n                <span class=\"service-tag\">Photorealistic Renders</span>\n                <span class=\"service-tag\">3D Interior Walkthroughs</span>\n                <span class=\"service-tag\">Material Mapping</span>\n                <span class=\"service-tag\">Lighting Ambiance</span>\n              </div>\n            </div>\n            <div class=\"service-footer\">\n              <a href=\"#contact\" class=\"link-editorial js-open-estimate\" data-service=\"3D Visualization\">\n                <span>Request 3D Renderings</span>\n                <span>→</span>\n              </a>\n              <span class=\"arch-number\" style=\"font-size: 0.85rem; color: #888;\">Ultra Realistic</span>\n            </div>\n          </article>\n        </div>\n      </div>\n    </section>\n\n    <!-- PORTFOLIO SECTION -->\n    <section class=\"section section-white\" id=\"portfolio\">\n      <div class=\"container\">\n        <div class=\"section-header text-center reveal reveal-up\">\n          <span class=\"eyebrow\">Curated Works</span>\n          <h2 class=\"section-title\">OUR PORTFOLIO</h2>\n          <p class=\"section-subtitle\">\n            Selected architectural and interior design work.\n          </p>\n        </div>\n\n        <!-- Category Filter Buttons -->\n        <div class=\"portfolio-filters reveal reveal-up delay-100\">\n          <button class=\"filter-btn is-active\" data-filter=\"all\">All</button>\n          <button class=\"filter-btn\" data-filter=\"residential\">Residential</button>\n          <button class=\"filter-btn\" data-filter=\"commercial\">Commercial</button>\n          <button class=\"filter-btn\" data-filter=\"civil\">Civil Construction</button>\n          <button class=\"filter-btn\" data-filter=\"3d\">3D Visualization</button>\n        </div>\n\n        <!-- Dynamic Portfolio Grid (Rendered via JS) -->\n        <div class=\"portfolio-grid\" id=\"portfolioGrid\">\n          <!-- Rendered dynamically by portfolio.js -->\n        </div>\n\n        <!-- Portfolio Action -->\n        <div style=\"text-align: center; margin-top: 3.5rem;\" class=\"reveal reveal-up\">\n          <a href=\"#contact\" class=\"btn btn-primary js-open-estimate\">\n            <span>Inquire for Custom Design</span>\n            <span class=\"btn-icon-arrow\">→</span>\n          </a>\n        </div>\n      </div>\n    </section>\n\n    <!-- LIGHTBOX MODAL -->\n    <div class=\"lightbox-modal\" id=\"projectLightbox\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"lightboxTitle\">\n      <div class=\"lightbox-dialog\">\n        <button class=\"lightbox-close-btn\" id=\"lightboxClose\" aria-label=\"Close Lightbox Modal\">✕</button>\n        <div class=\"lightbox-image-side\">\n          <img src=\"\" alt=\"Project detail image\" id=\"lightboxImg\" class=\"lightbox-img\">\n        </div>\n        <div class=\"lightbox-content-side\">\n          <div>\n            <span class=\"lightbox-category\" id=\"lightboxCategory\">Category</span>\n            <h3 class=\"lightbox-title\" id=\"lightboxTitle\">Project Title</h3>\n            <p style=\"font-size: 0.85rem; color: #777; margin-bottom: 1rem;\" id=\"lightboxLocation\">Location</p>\n            <p class=\"lightbox-description\" id=\"lightboxDescription\">Project Description</p>\n            <div class=\"lightbox-spec-list\" id=\"lightboxSpecs\"></div>\n          </div>\n          <div>\n            <a \n              href=\"https://wa.me/923333001231\" \n              target=\"_blank\" \n              rel=\"noopener noreferrer\" \n              class=\"btn btn-whatsapp\" \n              id=\"lightboxInquireBtn\" \n              style=\"width: 100%;\"\n            >\n              <span>Inquire About This Style on WhatsApp →</span>\n            </a>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <!-- PROCESS TIMELINE SECTION -->\n    <section class=\"section section-charcoal\" id=\"process\">\n      <div class=\"container\">\n        <div class=\"section-header reveal reveal-up\">\n          <span class=\"eyebrow eyebrow-dark\">Methodology</span>\n          <h2 class=\"section-title text-white\">FROM FIRST IDEA<br><span class=\"text-red\">TO FINAL DETAIL</span></h2>\n          <p class=\"section-subtitle text-muted\">\n            A transparent, collaborative architectural journey ensuring precision at every milestone.\n          </p>\n        </div>\n\n        <div class=\"process-timeline\">\n          <!-- 01 -->\n          <div class=\"process-step reveal reveal-up delay-100\">\n            <span class=\"process-num\">01</span>\n            <h3 class=\"process-step-title text-white\">CONSULTATION</h3>\n            <p class=\"process-step-desc\">\n              Initial meetings to discuss ideas, budget, and project requirements. This phase establishes a strong foundation for the design process.\n            </p>\n          </div>\n\n          <!-- 02 -->\n          <div class=\"process-step reveal reveal-up delay-200\">\n            <span class=\"process-num\">02</span>\n            <h3 class=\"process-step-title text-white\">DESIGN DEVELOPMENT</h3>\n            <p class=\"process-step-desc\">\n              Creation of concept sketches and 3D models based on client feedback. Iterative revisions ensure the design aligns with the client's vision.\n            </p>\n          </div>\n\n          <!-- 03 -->\n          <div class=\"process-step reveal reveal-up delay-300\">\n            <span class=\"process-num\">03</span>\n            <h3 class=\"process-step-title text-white\">DOCUMENTATION</h3>\n            <p class=\"process-step-desc\">\n              Preparation of detailed architectural drawings, construction documentation, and material specifications for contractor bidding.\n            </p>\n          </div>\n\n          <!-- 04 -->\n          <div class=\"process-step reveal reveal-up delay-400\">\n            <span class=\"process-num\">04</span>\n            <h3 class=\"process-step-title text-white\">CONSTRUCTION SUPERVISION</h3>\n            <p class=\"process-step-desc\">\n              On-site oversight and project coordination to ensure construction complies with architectural design, quality standards, and schedule.\n            </p>\n          </div>\n        </div>\n      </div>\n    </section>\n\n    <!-- TESTIMONIALS SECTION -->\n    <section class=\"section section-white arch-grid-bg\" id=\"reviews\">\n      <div class=\"container\">\n        <div class=\"section-header text-center reveal reveal-up\">\n          <span class=\"eyebrow\">Client Testimonials</span>\n          <h2 class=\"section-title\">CLIENT TRUST & EXPERIENCES</h2>\n          \n          <!-- Google Review Rating Badge -->\n          <div>\n            <div class=\"google-rating-badge\">\n              <span class=\"rating-stars\">★★★★★</span>\n              <span class=\"rating-text\">4.5 Google Rating (19+ Verified Reviews in Karachi)</span>\n            </div>\n          </div>\n        </div>\n\n        <div class=\"testimonials-grid\">\n          <!-- Testimonial 1 -->\n          <div class=\"testimonial-card reveal reveal-up delay-100\">\n            <div>\n              <div class=\"testimonial-quote-icon\">“</div>\n              <p class=\"testimonial-text\">\n                Exceptional eye for spatial optimization and modern aesthetics. They transformed our PECHS bungalow into a bright, airy contemporary home that exceeded our family's expectations.\n              </p>\n            </div>\n            <div class=\"testimonial-author\">\n              <div class=\"author-name\">Tariq Mahmood</div>\n              <div class=\"author-role\">Residential Client • PECHS, Karachi</div>\n            </div>\n          </div>\n\n          <!-- Testimonial 2 -->\n          <div class=\"testimonial-card reveal reveal-up delay-200\">\n            <div>\n              <div class=\"testimonial-quote-icon\">“</div>\n              <p class=\"testimonial-text\">\n                Professionalism from the very first consultation. The 3D visualizations provided before civil work began were exact to the millimeter. Highly recommended for commercial office interiors.\n              </p>\n            </div>\n            <div class=\"testimonial-author\">\n              <div class=\"author-name\">Salman Rasheed</div>\n              <div class=\"author-role\">Corporate Director • Shahrah-e-Faisal</div>\n            </div>\n          </div>\n\n          <!-- Testimonial 3 -->\n          <div class=\"testimonial-card reveal reveal-up delay-300\">\n            <div>\n              <div class=\"testimonial-quote-icon\">“</div>\n              <p class=\"testimonial-text\">\n                As civil contractors, their site supervision and material standards were impeccable. Timelines were honored and workmanship on structural details was top tier.\n              </p>\n            </div>\n            <div class=\"testimonial-author\">\n              <div class=\"author-name\">Farhan Siddiqui</div>\n              <div class=\"author-role\">Property Investor • Clifton, Karachi</div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n\n    <!-- CALL TO ACTION BANNER -->\n    <section class=\"cta-banner\">\n      <div class=\"container\">\n        <div class=\"cta-content-wrapper\">\n          <div class=\"cta-text-side reveal reveal-left\">\n            <span class=\"eyebrow eyebrow-white\">Let's Build Something Exceptional</span>\n            <h2 class=\"cta-heading\">READY TO BRING YOUR<br><span class=\"text-red\">ARCHITECTURAL VISION</span> TO LIFE?</h2>\n            <p class=\"cta-subtitle\">\n              Contact our Karachi design studio today to discuss custom residential design, commercial renovations, or turnkey civil execution.\n            </p>\n          </div>\n          <div class=\"cta-buttons-side reveal reveal-right delay-200\">\n            <a \n              href=\"https://wa.me/923333001231?text=Hello%20Architecture%20Interior%20Design%2C%20I%20would%20like%20to%20inquire%20about%20a%20new%20project.\" \n              target=\"_blank\" \n              rel=\"noopener noreferrer\" \n              class=\"btn btn-whatsapp\"\n            >\n              <span>Chat on WhatsApp</span>\n              <span>💬</span>\n            </a>\n            <a href=\"#contact\" class=\"btn btn-outline-white js-open-estimate\">\n              <span>Request Estimate →</span>\n            </a>\n          </div>\n        </div>\n      </div>\n    </section>\n\n    <!-- CONTACT & INQUIRY SECTION -->\n    <section class=\"section section-white arch-grid-bg\" id=\"contact\">\n      <div class=\"container\">\n        <div class=\"section-header reveal reveal-up\">\n          <span class=\"eyebrow\">Get In Touch</span>\n          <h2 class=\"section-title\">CONTACT OUR STUDIO</h2>\n          <p class=\"section-subtitle\">\n            We would love to hear about your upcoming project in Karachi.\n          </p>\n        </div>\n\n        <div class=\"contact-layout-grid\">\n          <!-- Studio Contact Info -->\n          <div class=\"contact-info-panel reveal reveal-left delay-100\">\n            <!-- Address -->\n            <div class=\"contact-card-item\">\n              <div class=\"contact-card-icon\" aria-hidden=\"true\">\n                <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n                  <path d=\"M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z\"/>\n                  <circle cx=\"12\" cy=\"10\" r=\"3\"/>\n                </svg>\n              </div>\n              <div>\n                <div class=\"contact-card-label\">Studio Location</div>\n                <div class=\"contact-card-value\">\n                  Block-7 & 8, Shahrah-e-Faisal Rd,<br>\n                  Block 2 P.E.C.H.S., Karachi, Pakistan\n                </div>\n              </div>\n            </div>\n\n            <!-- Phone / WhatsApp -->\n            <div class=\"contact-card-item\">\n              <div class=\"contact-card-icon\" aria-hidden=\"true\">\n                <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n                  <path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\"/>\n                </svg>\n              </div>\n              <div>\n                <div class=\"contact-card-label\">Direct Call / WhatsApp</div>\n                <div class=\"contact-card-value\">\n                  <a href=\"tel:+923333001231\">+92 333 3001231</a>\n                </div>\n              </div>\n            </div>\n\n            <!-- Email -->\n            <div class=\"contact-card-item\">\n              <div class=\"contact-card-icon\" aria-hidden=\"true\">\n                <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n                  <path d=\"M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z\"/>\n                  <polyline points=\"22,6 12,13 2,6\"/>\n                </svg>\n              </div>\n              <div>\n                <div class=\"contact-card-label\">Email Inquiries</div>\n                <div class=\"contact-card-value\">\n                  <a href=\"mailto:architectureinteriordesign@gmail.com\">architectureinteriordesign@gmail.com</a>\n                </div>\n              </div>\n            </div>\n\n            <!-- Hours -->\n            <div class=\"contact-card-item\">\n              <div class=\"contact-card-icon\" aria-hidden=\"true\">\n                <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n                  <circle cx=\"12\" cy=\"12\" r=\"10\"/>\n                  <polyline points=\"12 6 12 12 16 14\"/>\n                </svg>\n              </div>\n              <div>\n                <div class=\"contact-card-label\">Studio Working Hours</div>\n                <div class=\"contact-card-value\">\n                  Monday – Sunday: 10:00 AM – 6:00 PM\n                </div>\n              </div>\n            </div>\n\n            <!-- Map Locator Mock Card -->\n            <div class=\"map-locator-card\">\n              <div class=\"map-locator-header\">\n                <strong style=\"font-size: 0.85rem; text-transform: uppercase;\">Studio Map Location</strong>\n                <span style=\"font-size: 0.75rem; color: var(--color-brand-red); font-weight: 700;\">Karachi, PK</span>\n              </div>\n              <div class=\"map-preview-box\">\n                <img \n                  src=\"https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&q=80\" \n                  alt=\"Karachi PECHS location preview\" \n                  class=\"map-mock-bg\"\n                >\n                <div class=\"map-pin-pulse\">\n                  <span class=\"pin-icon\">📍</span>\n                  <span style=\"font-size: 0.65rem; background: #111; color: #fff; padding: 2px 6px; border-radius: 2px; font-weight: 700;\">PECHS Studio</span>\n                </div>\n              </div>\n              <a \n                href=\"https://maps.google.com/?q=Shahrah-e-Faisal+Rd,+Block+2+P.E.C.H.S.,+Karachi\" \n                target=\"_blank\" \n                rel=\"noopener noreferrer\" \n                class=\"link-editorial\" \n                style=\"font-size: 0.75rem;\"\n              >\n                <span>Open in Google Maps</span>\n                <span>↗</span>\n              </a>\n            </div>\n          </div>\n\n          <!-- Contact Inquiry Form -->\n          <div class=\"contact-form-panel reveal reveal-right delay-200\">\n            <h3 class=\"form-title\">START A CONVERSATION</h3>\n            <p class=\"form-subtitle\">Fill out the form below or message directly on WhatsApp.</p>\n\n            <form id=\"contactForm\">\n              <div class=\"form-group-row\">\n                <div class=\"form-group\">\n                  <label class=\"form-label\" for=\"contactName\">Your Name *</label>\n                  <input type=\"text\" id=\"contactName\" class=\"form-input\" placeholder=\"e.g. Ali Ahmed\" required>\n                </div>\n                <div class=\"form-group\">\n                  <label class=\"form-label\" for=\"contactPhone\">Phone / WhatsApp *</label>\n                  <input type=\"tel\" id=\"contactPhone\" class=\"form-input\" placeholder=\"e.g. +92 333 1234567\" required>\n                </div>\n              </div>\n\n              <div class=\"form-group-row\">\n                <div class=\"form-group\">\n                  <label class=\"form-label\" for=\"contactEmail\">Email Address *</label>\n                  <input type=\"email\" id=\"contactEmail\" class=\"form-input\" placeholder=\"e.g. name@domain.com\" required>\n                </div>\n                <div class=\"form-group\">\n                  <label class=\"form-label\" for=\"contactType\">Service Type</label>\n                  <select id=\"contactType\" class=\"form-select\">\n                    <option value=\"Residential Interior & Architecture\">Residential Interior & Architecture</option>\n                    <option value=\"Commercial & Office Design\">Commercial & Office Design</option>\n                    <option value=\"Civil Construction Services\">Civil Construction Services</option>\n                    <option value=\"3D Visualization & Rendering\">3D Visualization & Rendering</option>\n                    <option value=\"Other / General Inquiry\">Other / General Inquiry</option>\n                  </select>\n                </div>\n              </div>\n\n              <div class=\"form-group\">\n                <label class=\"form-label\" for=\"contactMessage\">Project Details & Requirements *</label>\n                <textarea id=\"contactMessage\" class=\"form-textarea\" placeholder=\"Describe your property location in Karachi, plot size, timeline, and design aspirations...\" required></textarea>\n              </div>\n\n              <button type=\"submit\" class=\"btn btn-primary\" style=\"width: 100%; padding: 1.1rem;\">\n                <span>Submit Inquiry & Connect</span>\n                <span class=\"btn-icon-arrow\">→</span>\n              </button>\n\n              <div id=\"formStatusMsg\" class=\"form-status-msg\"></div>\n            </form>\n          </div>\n        </div>\n      </div>\n    </section>\n  </main>\n\n  <!-- PROJECT ESTIMATE MODAL (START A PROJECT) -->\n  <div class=\"estimate-modal\" id=\"estimateModal\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"estimateTitle\">\n    <div class=\"estimate-dialog\">\n      <button class=\"lightbox-close-btn\" id=\"estimateClose\" aria-label=\"Close Estimate Modal\">✕</button>\n      <span class=\"eyebrow\">Consultation Request</span>\n      <h3 class=\"section-title\" id=\"estimateTitle\" style=\"font-size: 1.6rem; margin-bottom: 0.5rem;\">PROJECT INQUIRY</h3>\n      <p style=\"font-size: 0.9rem; color: var(--color-gray-text); margin-bottom: 2rem;\">\n        Provide your project requirements to connect directly with our architectural lead.\n      </p>\n\n      <form id=\"estimateForm\">\n        <div class=\"form-group-row\">\n          <div class=\"form-group\">\n            <label class=\"form-label\" for=\"estName\">Your Name *</label>\n            <input type=\"text\" id=\"estName\" class=\"form-input\" placeholder=\"Full Name\" required>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"form-label\" for=\"estPhone\">Phone / WhatsApp *</label>\n            <input type=\"tel\" id=\"estPhone\" class=\"form-input\" placeholder=\"Phone Number\" required>\n          </div>\n        </div>\n\n        <div class=\"form-group-row\">\n          <div class=\"form-group\">\n            <label class=\"form-label\" for=\"estService\">Service Needed</label>\n            <select id=\"estService\" class=\"form-select\">\n              <option value=\"Residential Architecture & Interior\">Residential Architecture & Interior</option>\n              <option value=\"Commercial Office Interior\">Commercial Office Interior</option>\n              <option value=\"Civil Construction & Contracting\">Civil Construction & Contracting</option>\n              <option value=\"3D Architectural Visualization\">3D Architectural Visualization</option>\n            </select>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"form-label\" for=\"estSize\">Approx. Area / Size</label>\n            <input type=\"text\" id=\"estSize\" class=\"form-input\" placeholder=\"e.g. 500 Sq. Yds / 3000 Sq. Ft\">\n          </div>\n        </div>\n\n        <div class=\"form-group\">\n          <label class=\"form-label\" for=\"estTimeline\">Target Timeline</label>\n          <select id=\"estTimeline\" class=\"form-select\">\n            <option value=\"Immediate (Within 1-2 weeks)\">Immediate (Within 1-2 weeks)</option>\n            <option value=\"1-3 Months\">1-3 Months</option>\n            <option value=\"3-6 Months\">3-6 Months</option>\n            <option value=\"Planning Stage (Flexible)\">Planning Stage (Flexible)</option>\n          </select>\n        </div>\n\n        <div class=\"form-group\">\n          <label class=\"form-label\" for=\"estDetails\">Project Location & Specific Notes</label>\n          <textarea id=\"estDetails\" class=\"form-textarea\" style=\"min-height: 90px;\" placeholder=\"Location in Karachi (PECHS, Clifton, DHA, etc.), special requirements...\"></textarea>\n        </div>\n\n        <button type=\"submit\" class=\"btn btn-primary\" style=\"width: 100%; padding: 1rem;\">\n          <span>Submit & Connect on WhatsApp →</span>\n        </button>\n\n        <div id=\"estimateStatusMsg\" class=\"form-status-msg\"></div>\n      </form>\n    </div>\n  </div>\n\n  <!-- FOOTER -->\n  <footer class=\"site-footer\">\n    <div class=\"container\">\n      <div class=\"footer-top-grid\">\n        <div class=\"footer-brand-side\">\n          <div class=\"logo-text-group\">\n            <span class=\"logo-title-arch\">ARCHITECTURE</span>\n            <span class=\"logo-title-main\">INTERIOR DESIGN</span>\n            <span class=\"logo-tagline\">Where Vision Meets Reality</span>\n          </div>\n          <p>\n            Innovative residential, commercial, and civil architectural design firm based in P.E.C.H.S., Karachi, Pakistan.\n          </p>\n        </div>\n\n        <div>\n          <h4 class=\"footer-column-title\">Services</h4>\n          <ul class=\"footer-link-list\">\n            <li><a href=\"#services\">Residential Architecture</a></li>\n            <li><a href=\"#services\">Turnkey Interior Design</a></li>\n            <li><a href=\"#services\">Commercial Office Design</a></li>\n            <li><a href=\"#services\">Civil Contracting</a></li>\n            <li><a href=\"#services\">3D Renderings</a></li>\n          </ul>\n        </div>\n\n        <div>\n          <h4 class=\"footer-column-title\">Quick Navigation</h4>\n          <ul class=\"footer-link-list\">\n            <li><a href=\"#home\">Home</a></li>\n            <li><a href=\"#about\">About Studio</a></li>\n            <li><a href=\"#portfolio\">Curated Projects</a></li>\n            <li><a href=\"#process\">Design Process</a></li>\n            <li><a href=\"#reviews\">Client Reviews</a></li>\n            <li><a href=\"#contact\">Contact Studio</a></li>\n          </ul>\n        </div>\n\n        <div>\n          <h4 class=\"footer-column-title\">Karachi Studio</h4>\n          <p style=\"color: #A0A0A0; font-size: 0.875rem; line-height: 1.6; margin-bottom: 1rem;\">\n            Block-7 & 8, Shahrah-e-Faisal Rd,<br>\n            Block 2 P.E.C.H.S., Karachi, Pakistan<br>\n            <strong>Hours:</strong> Daily 10 AM – 6 PM\n          </p>\n          <a href=\"tel:+923333001231\" style=\"color: var(--color-white); font-weight: 700; font-size: 0.95rem; display: block; margin-bottom: 0.5rem;\">\n            📞 +92 333 3001231\n          </a>\n          <a href=\"mailto:architectureinteriordesign@gmail.com\" style=\"color: var(--color-gray-text); font-size: 0.8125rem;\">\n            ✉️ architectureinteriordesign@gmail.com\n          </a>\n        </div>\n      </div>\n\n      <div class=\"footer-bottom-bar\">\n        <div>\n          © 2026 Architecture Interior Design. All rights reserved. Registered in Karachi, Pakistan.\n        </div>\n        <div>\n          <a href=\"#home\">Back to Top ↑</a>\n        </div>\n      </div>\n    </div>\n  </footer>\n\n  <!-- DYNAMIC FLOATING WHATSAPP ATTENTION & POPUP SYSTEM -->\n  <div class=\"floating-whatsapp-container\">\n    \n    <!-- Dynamic WhatsApp Popup Card -->\n    <div class=\"wa-popup-card\" id=\"waPopupCard\" role=\"dialog\" aria-label=\"WhatsApp Quick Consultation\">\n      <div class=\"wa-popup-header\">\n        <div class=\"wa-header-profile\">\n          <div class=\"wa-avatar\">\n            <span>📐</span>\n            <span class=\"wa-avatar-online\"></span>\n          </div>\n          <div class=\"wa-header-info\">\n            <span class=\"wa-header-name\">Architecture Interior Design</span>\n            <span class=\"wa-header-status\">● Online • Karachi Studio</span>\n          </div>\n        </div>\n        <button class=\"wa-popup-close-btn\" id=\"waPopupCloseBtn\" aria-label=\"Close WhatsApp Popup\">✕</button>\n      </div>\n\n      <div class=\"wa-popup-body\">\n        <div class=\"wa-message-bubble\">\n          👋 <strong>Hello!</strong> Planning an architecture, interior design, or construction project in Karachi? Select a topic below to chat directly with our lead architect:\n        </div>\n\n        <div class=\"wa-chips-title\">Quick Inquiries</div>\n        <div class=\"wa-chips-list\">\n          <button class=\"wa-chip-btn js-wa-chip\" data-msg=\"Hello Architecture Interior Design, I would like to inquire about Residential Architecture & Interior Design consultation in Karachi.\">\n            <span>🏡 Residential Villa Design</span>\n            <span class=\"wa-chip-arrow\">→</span>\n          </button>\n          <button class=\"wa-chip-btn js-wa-chip\" data-msg=\"Hello Architecture Interior Design, I am inquiring about Commercial Office / Retail Store Interior Design in Karachi.\">\n            <span>🏢 Commercial / Office Design</span>\n            <span class=\"wa-chip-arrow\">→</span>\n          </button>\n          <button class=\"wa-chip-btn js-wa-chip\" data-msg=\"Hello Architecture Interior Design, I would like to discuss Civil Contractor & Construction Services for my plot/property.\">\n            <span>🏗️ Civil Construction Services</span>\n            <span class=\"wa-chip-arrow\">→</span>\n          </button>\n        </div>\n      </div>\n\n      <div class=\"wa-popup-footer\">\n        <a \n          href=\"https://wa.me/923333001231?text=Hello%20Architecture%20Interior%20Design%2C%20I%20would%20like%20to%20inquire%20about%20a%20project%20in%20Karachi.\" \n          target=\"_blank\" \n          rel=\"noopener noreferrer\" \n          class=\"wa-direct-chat-link\"\n        >\n          <span>Open Direct WhatsApp Chat</span>\n          <span aria-hidden=\"true\">💬</span>\n        </a>\n      </div>\n    </div>\n\n    <!-- Dynamic WhatsApp Trigger Button with Pulsing Badge & Radar Glow -->\n    <button \n      class=\"floating-whatsapp-widget\" \n      id=\"waMainBtn\" \n      aria-label=\"Chat with us on WhatsApp (+92 333 3001231)\"\n    >\n      <span class="wa-unread-badge" id="waUnreadBadge">1</span>\n      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">\n        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>\n      </svg>\n      <span>Chat on WhatsApp</span>\n    </button>\n\n  </div>\n\n  <!-- JavaScript Modules -->\n  <script src="js/portfolio.js"></script>\n  <script src="js/animations.js"></script>\n  <script src="js/form.js"></script>\n  <script src="js/app.js"></script>\n  <!-- Embedded Zero-Dependency Application Logic -->\n  <script>\nconst portfolioProjects = [\n  {\n    id: 'res-1',\n    title: 'Modern Cantilevered Villa',\n    category: 'residential',\n    categoryLabel: 'Residential Design',\n    location: 'Karachi, Pakistan',\n    tag: 'Featured Concept',\n    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=85',\n    spanClass: 'col-span-8',\n    description: 'A striking multi-level modern residence featuring cantilevered geometric volumes, floor-to-ceiling panoramic glass, and integrated twilight illumination designed for optimal airflow and natural light.',\n    specs: [\n      { label: 'Scope', val: 'Architecture & Full Turnkey Interior' },\n      { label: 'Area', val: '7,500 Sq. Ft.' },\n      { label: 'Style', val: 'Minimalist Contemporary' },\n      { label: 'Status', val: 'Design Visualization' }\n    ]\n  },\n  {\n    id: 'res-2',\n    title: 'Travertine & Oak Living Gallery',\n    category: 'residential',\n    categoryLabel: 'Residential Design',\n    location: 'PECHS, Karachi',\n    tag: 'Portfolio Concept',\n    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85',\n    spanClass: 'col-span-4',\n    description: 'Double-height open concept living lounge featuring acoustic fluted wood paneling, Italian travertine fireplace, and serene floor-to-ceiling outdoor views.',\n    specs: [\n      { label: 'Scope', val: 'Custom Interior Architecture & Millwork' },\n      { label: 'Ceiling Height', val: '22 Feet Double-Volume' },\n      { label: 'Materials', val: 'Fluted Oak, Travertine, Matte Steel' },\n      { label: 'Status', val: 'Design Visualization' }\n    ]\n  },\n  {\n    id: 'com-1',\n    title: 'Executive Corporate Headquarters',\n    category: 'commercial',\n    categoryLabel: 'Commercial Design',\n    location: 'Shahrah-e-Faisal, Karachi',\n    tag: 'Design Visualization',\n    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=85',\n    spanClass: 'col-span-6',\n    description: 'Minimalist corporate headquarters created with flexible collaborative zones, acoustic privacy pods, executive boardrooms, and branded architectural linework.',\n    specs: [\n      { label: 'Scope', val: 'Corporate Workspace & Spatial Planning' },\n      { label: 'Area', val: '12,000 Sq. Ft.' },\n      { label: 'Type', val: 'Commercial Office Suite' },\n      { label: 'Status', val: 'Featured Concept' }\n    ]\n  },\n  {\n    id: 'com-2',\n    title: 'Luxury Designer Flagship Boutique',\n    category: 'commercial',\n    categoryLabel: 'Commercial Design',\n    location: 'Clifton, Karachi',\n    tag: 'Featured Concept',\n    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85',\n    spanClass: 'col-span-6',\n    description: 'High-fashion luxury retail flagship with minimalist travertine pedestals, custom brass hanging rails, ambient cove lighting, and seamless monolithic micro-cement flooring.',\n    specs: [\n      { label: 'Scope', val: 'Retail Architecture & Bespoke Fixtures' },\n      { label: 'Lighting', val: 'Architectural CRI 98+ Studio LEDs' },\n      { label: 'Concept', val: 'Monolithic Minimalist' },\n      { label: 'Status', val: 'Portfolio Concept' }\n    ]\n  },\n  {\n    id: 'civil-1',\n    title: 'Reinforced Concrete Structural Framework',\n    category: 'civil',\n    categoryLabel: 'Civil Construction',\n    location: 'Karachi, Pakistan',\n    tag: 'Execution Quality',\n    image: 'https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1200&q=85',\n    spanClass: 'col-span-4',\n    description: 'Precision civil contractor execution including seismic-resistant reinforced concrete framing, rigorous site supervision, quality material testing, and strict safety standards.',\n    specs: [\n      { label: 'Scope', val: 'Civil Contracting & Site Supervision' },\n      { label: 'Structure', val: 'Cast-in-place Reinforced Concrete' },\n      { label: 'Standards', val: 'Engineered Quality Control' },\n      { label: 'Status', val: 'Civil Engineering Concept' }\n    ]\n  },\n  {\n    id: '3d-1',\n    title: '3D Photorealistic Exterior Visualization',\n    category: '3d',\n    categoryLabel: '3D Visualization',\n    location: 'Design Studio Karachi',\n    tag: '3D Render',\n    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85',\n    spanClass: 'col-span-8',\n    description: 'High-end CGI architectural visualization rendering materials, solar orientation, twilight lighting ambiance, and landscaping before physical groundbreaking.',\n    specs: [\n      { label: 'Service', val: '3D CGI Modeling & Architectural Lighting' },\n      { label: 'Software', val: 'High-fidelity Ray Tracing Engine' },\n      { label: 'Resolution', val: '8K Ultra HD Photorealism' },\n      { label: 'Status', val: 'Design Visualization' }\n    ]\n  },\n  {\n    id: 'com-3',\n    title: 'Contemporary Healthcare & Wellness Clinic',\n    category: 'commercial',\n    categoryLabel: 'Commercial Design',\n    location: 'Karachi, Pakistan',\n    tag: 'Featured Concept',\n    image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=85',\n    spanClass: 'col-span-6',\n    description: 'Curved organic walls, soft diffused lighting, acoustic isolation, and tranquil materials designed to provide an anxiety-free, elevated patient journey.',\n    specs: [\n      { label: 'Scope', val: 'Medical Space Planning & Interior Design' },\n      { label: 'Area', val: '4,500 Sq. Ft.' },\n      { label: 'Focus', val: 'Acoustic Comfort & Hygiene Standards' },\n      { label: 'Status', val: 'Design Visualization' }\n    ]\n  },\n  {\n    id: 'res-3',\n    title: 'Minimalist Master Suite & Spa Bath',\n    category: 'residential',\n    categoryLabel: 'Residential Design',\n    location: 'Karachi, Pakistan',\n    tag: 'Portfolio Concept',\n    image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=85',\n    spanClass: 'col-span-6',\n    description: 'Private residential master sanctuary featuring integrated upholstered headboard wall, hidden walk-in wardrobe, and en-suite freestanding marble soaking tub.',\n    specs: [\n      { label: 'Scope', val: 'Master Suite & Luxury Bath Interior' },\n      { label: 'Materials', val: 'Fluted Walnut, Statuario Marble' },\n      { label: 'Lighting', val: 'Concealed Indirect Warm LEDs' },\n      { label: 'Status', val: 'Design Visualization' }\n    ]\n  }\n];\n\nfunction initPortfolio() {\n  const gridContainer = document.getElementById('portfolioGrid');\n  const filterBtns = document.querySelectorAll('.filter-btn');\n  const lightboxModal = document.getElementById('projectLightbox');\n  const lightboxClose = document.getElementById('lightboxClose');\n  \n  if (!gridContainer) return;\n  \n  function renderProjects(filter = 'all') {\n    gridContainer.innerHTML = '';\n    const filtered = filter === 'all' ? portfolioProjects : portfolioProjects.filter(p => p.category === filter);\n    filtered.forEach((project, idx) => {\n      const card = document.createElement('div');\n      card.className = `portfolio-item ${project.spanClass} reveal reveal-up delay-${(idx % 4 + 1) * 100}`;\n      card.setAttribute('data-id', project.id);\n      card.setAttribute('data-category', project.category);\n      card.setAttribute('tabindex', '0');\n      card.setAttribute('role', 'button');\n      card.setAttribute('aria-label', `View details for ${project.title}`);\n      card.innerHTML = `\n        <img src=\"${project.image}\" alt=\"${project.title}\" class=\"portfolio-item-img\" loading=\"lazy\">\n        <div class=\"portfolio-item-overlay\">\n          <span class=\"portfolio-tag\">${project.categoryLabel}</span>\n          <h3 class=\"portfolio-item-title\">${project.title}</h3>\n          <div class=\"portfolio-item-meta\">\n            <span>${project.location}</span>\n            <span class=\"portfolio-concept-badge\">${project.tag}</span>\n          </div>\n        </div>\n      `;\n      card.addEventListener('click', () => openLightbox(project));\n      card.addEventListener('keydown', (e) => {\n        if (e.key === 'Enter' || e.key === ' ') {\n          e.preventDefault();\n          openLightbox(project);\n        }\n      });\n      gridContainer.appendChild(card);\n    });\n    if (window.triggerScrollObserver) {\n      window.triggerScrollObserver();\n    }\n  }\n  \n  filterBtns.forEach(btn => {\n    btn.addEventListener('click', () => {\n      filterBtns.forEach(b => b.classList.remove('is-active'));\n      btn.classList.add('is-active');\n      const filterValue = btn.getAttribute('data-filter');\n      renderProjects(filterValue);\n    });\n  });\n  \n  function openLightbox(project) {\n    if (!lightboxModal) return;\n    document.getElementById('lightboxImg').src = project.image;\n    document.getElementById('lightboxImg').alt = project.title;\n    document.getElementById('lightboxCategory').textContent = project.categoryLabel;\n    document.getElementById('lightboxTitle').textContent = project.title;\n    document.getElementById('lightboxLocation').textContent = project.location;\n    document.getElementById('lightboxDescription').textContent = project.description;\n    const specsContainer = document.getElementById('lightboxSpecs');\n    if (specsContainer && project.specs) {\n      specsContainer.innerHTML = project.specs.map(spec => `\n        <div class=\"lightbox-spec-row\">\n          <span class=\"lightbox-spec-label\">${spec.label}</span>\n          <span class=\"lightbox-spec-val\">${spec.val}</span>\n        </div>\n      `).join('');\n    }\n    const modalInquiryBtn = document.getElementById('lightboxInquireBtn');\n    if (modalInquiryBtn) {\n      const waMessage = encodeURIComponent(`Hello Architecture Interior Design, I am interested in a project similar to: \"${project.title}\" (${project.categoryLabel}). I would like to discuss design consultation in Karachi.`);\n      modalInquiryBtn.href = `https://wa.me/923333001231?text=${waMessage}`;\n    }\n    lightboxModal.classList.add('is-active');\n    document.body.classList.add('no-scroll');\n  }\n  \n  function closeLightbox() {\n    if (!lightboxModal) return;\n    lightboxModal.classList.remove('is-active');\n    document.body.classList.remove('no-scroll');\n  }\n  \n  if (lightboxClose) {\n    lightboxClose.addEventListener('click', closeLightbox);\n  }\n  if (lightboxModal) {\n    lightboxModal.addEventListener('click', (e) => {\n      if (e.target === lightboxModal) closeLightbox();\n    });\n  }\n  document.addEventListener('keydown', (e) => {\n    if (e.key === 'Escape' && lightboxModal && lightboxModal.classList.contains('is-active')) closeLightbox();\n  });\n  renderProjects('all');\n}\nwindow.initPortfolio = initPortfolio;\n\nlet revealObserver;\nfunction initAnimations() {\n  const observerOptions = { root: null, rootMargin: '0px 0px -60px 0px', threshold: 0.12 };\n  revealObserver = new IntersectionObserver((entries, observer) => {\n    entries.forEach(entry => {\n      if (entry.isIntersecting) {\n        entry.target.classList.add('is-revealed');\n        if (entry.target.classList.contains('stat-counter') && !entry.target.dataset.counted) {\n          animateCounter(entry.target);\n        }\n        observer.unobserve(entry.target);\n      }\n    });\n  }, observerOptions);\n  observeRevealElements();\n  const heroImg = document.querySelector('.hero-bg-img');\n  if (heroImg && window.innerWidth > 768) {\n    window.addEventListener('scroll', () => {\n      const scrolled = window.pageYOffset;\n      if (scrolled < window.innerHeight) {\n        heroImg.style.transform = `translateY(${scrolled * 0.22}px) scale(1.02)`;\n      }\n    }, { passive: true });\n  }\n}\nfunction observeRevealElements() {\n  const elements = document.querySelectorAll('.reveal:not(.is-revealed)');\n  elements.forEach(el => {\n    if (revealObserver) {\n      revealObserver.observe(el);\n    } else {\n      el.classList.add('is-revealed');\n    }\n  });\n}\nfunction animateCounter(el) {\n  el.dataset.counted = 'true';\n  const target = parseFloat(el.getAttribute('data-target'));\n  const isDecimal = el.getAttribute('data-decimal') === 'true';\n  const suffix = el.getAttribute('data-suffix') || '';\n  const duration = 1800;\n  const startTime = performance.now();\n  function updateNumber(currentTime) {\n    const elapsed = currentTime - startTime;\n    const progress = Math.min(elapsed / duration, 1);\n    const easeProgress = 1 - Math.pow(2, -10 * progress);\n    const currentVal = target * easeProgress;\n    if (isDecimal) {\n      el.textContent = currentVal.toFixed(1) + suffix;\n    } else {\n      el.textContent = Math.floor(currentVal) + suffix;\n    }\n    if (progress < 1) {\n      requestAnimationFrame(updateNumber);\n    } else {\n      el.textContent = (isDecimal ? target.toFixed(1) : target) + suffix;\n    }\n  }\n  requestAnimationFrame(updateNumber);\n}\nwindow.triggerScrollObserver = function() {\n  setTimeout(() => { observeRevealElements(); }, 50);\n};\nwindow.initAnimations = initAnimations;\n\nfunction initForms() {\n  const contactForm = document.getElementById('contactForm');\n  const formStatus = document.getElementById('formStatusMsg');\n  const estimateModal = document.getElementById('estimateModal');\n  const estimateClose = document.getElementById('estimateClose');\n  const openEstimateBtns = document.querySelectorAll('.js-open-estimate');\n  const estimateForm = document.getElementById('estimateForm');\n  const estimateStatus = document.getElementById('estimateStatusMsg');\n  if (contactForm) {\n    contactForm.addEventListener('submit', (e) => {\n      e.preventDefault();\n      const name = document.getElementById('contactName')?.value.trim();\n      const phone = document.getElementById('contactPhone')?.value.trim();\n      const email = document.getElementById('contactEmail')?.value.trim();\n      const projectType = document.getElementById('contactType')?.value;\n      const message = document.getElementById('contactMessage')?.value.trim();\n      if (!name || !phone || !email || !message) {\n        alert('Please fill in all required fields.');\n        return;\n      }\n      const waText = encodeURIComponent(\n        `*New Inquiry from Website*\\n` +\n        `• Name: ${name}\\n` +\n        `• Phone: ${phone}\\n` +\n        `• Email: ${email}\\n` +\n        `• Project Type: ${projectType || 'General Inquiry'}\\n` +\n        `• Message: ${message}`\n      );\n      if (formStatus) {\n        formStatus.innerHTML = `<strong>Thank you, ${name}!</strong> Your inquiry has been received. Our team will contact you within 24 business hours. You can also chat directly on WhatsApp.`;\n        formStatus.classList.add('is-success');\n        formStatus.style.display = 'block';\n      }\n      contactForm.reset();\n      setTimeout(() => {\n        const directWA = confirm('Inquiry recorded! Would you like to open WhatsApp directly with your message?');\n        if (directWA) {\n          window.open(`https://wa.me/923333001231?text=${waText}`, '_blank');\n        }\n      }, 400);\n    });\n  }\n  openEstimateBtns.forEach(btn => {\n    btn.addEventListener('click', (e) => {\n      e.preventDefault();\n      openEstimateModal();\n    });\n  });\n  function openEstimateModal() {\n    if (!estimateModal) return;\n    estimateModal.classList.add('is-active');\n    document.body.classList.add('no-scroll');\n  }\n  function closeEstimateModal() {\n    if (!estimateModal) return;\n    estimateModal.classList.remove('is-active');\n    document.body.classList.remove('no-scroll');\n  }\n  if (estimateClose) estimateClose.addEventListener('click', closeEstimateModal);\n  if (estimateModal) {\n    estimateModal.addEventListener('click', (e) => {\n      if (e.target === estimateModal) closeEstimateModal();\n    });\n  }\n  document.addEventListener('keydown', (e) => {\n    if (e.key === 'Escape' && estimateModal && estimateModal.classList.contains('is-active')) closeEstimateModal();\n  });\n  if (estimateForm) {\n    estimateForm.addEventListener('submit', (e) => {\n      e.preventDefault();\n      const name = document.getElementById('estName')?.value.trim();\n      const phone = document.getElementById('estPhone')?.value.trim();\n      const service = document.getElementById('estService')?.value;\n      const size = document.getElementById('estSize')?.value.trim();\n      const timeline = document.getElementById('estTimeline')?.value;\n      const details = document.getElementById('estDetails')?.value.trim();\n      const waText = encodeURIComponent(\n        `*Project Consultation Request*\\n` +\n        `• Name: ${name}\\n` +\n        `• Contact: ${phone}\\n` +\n        `• Service Required: ${service}\\n` +\n        `• Approximate Area: ${size || 'Not Specified'}\\n` +\n        `• Target Timeline: ${timeline || 'Flexible'}\\n` +\n        `• Notes: ${details || 'None'}`\n      );\n      if (estimateStatus) {\n        estimateStatus.innerHTML = `<strong>Thank you, ${name}!</strong> Your project consultation request has been submitted. Opening WhatsApp to connect with our design lead...`;\n        estimateStatus.classList.add('is-success');\n        estimateStatus.style.display = 'block';\n      }\n      setTimeout(() => {\n        window.open(`https://wa.me/923333001231?text=${waText}`, '_blank');\n        estimateForm.reset();\n        closeEstimateModal();\n      }, 1200);\n    });\n  }\n}\nwindow.initForms = initForms;\n\ndocument.addEventListener('DOMContentLoaded', () => {\n  initNavigation();\n  initDynamicWhatsApp();\n  if (typeof window.initAnimations === 'function') window.initAnimations();\n  if (typeof window.initPortfolio === 'function') window.initPortfolio();\n  if (typeof window.initForms === 'function') window.initForms();\n});\nfunction initNavigation() {\n  const header = document.getElementById('siteHeader');\n  const menuToggle = document.getElementById('menuToggle');\n  const mobileDrawer = document.getElementById('mobileDrawer');\n  const drawerBackdrop = document.getElementById('drawerBackdrop');\n  const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');\n  const sections = document.querySelectorAll('section[id]');\n  function handleScroll() {\n    if (window.scrollY > 50) header.classList.add('is-scrolled');\n    else header.classList.remove('is-scrolled');\n  }\n  window.addEventListener('scroll', handleScroll, { passive: true });\n  handleScroll();\n  function openDrawer() {\n    menuToggle.classList.add('is-open');\n    mobileDrawer.classList.add('is-open');\n    drawerBackdrop.classList.add('is-open');\n    document.body.classList.add('no-scroll');\n    menuToggle.setAttribute('aria-expanded', 'true');\n  }\n  function closeDrawer() {\n    menuToggle.classList.remove('is-open');\n    mobileDrawer.classList.remove('is-open');\n    drawerBackdrop.classList.remove('is-open');\n    document.body.classList.remove('no-scroll');\n    menuToggle.setAttribute('aria-expanded', 'false');\n  }\n  if (menuToggle) {\n    menuToggle.addEventListener('click', () => {\n      const isOpen = mobileDrawer.classList.contains('is-open');\n      if (isOpen) closeDrawer(); else openDrawer();\n    });\n  }\n  if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);\n  navLinks.forEach(link => {\n    link.addEventListener('click', (e) => {\n      const targetId = link.getAttribute('href');\n      if (targetId && targetId.startsWith('#')) {\n        e.preventDefault();\n        const targetSection = document.querySelector(targetId);\n        if (targetSection) {\n          closeDrawer();\n          const headerHeight = header.offsetHeight || 80;\n          const targetPos = targetSection.getBoundingClientRect().top + window.pageYOffset - (headerHeight - 10);\n          window.scrollTo({ top: targetPos, behavior: 'smooth' });\n        }\n      }\n    });\n  });\n  function updateActiveNavLink() {\n    const scrollPosition = window.scrollY + 200;\n    sections.forEach(section => {\n      const sectionTop = section.offsetTop;\n      const sectionHeight = section.offsetHeight;\n      const sectionId = section.getAttribute('id');\n      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {\n        navLinks.forEach(link => {\n          if (link.getAttribute('href') === `#${sectionId}`) link.classList.add('is-active');\n          else link.classList.remove('is-active');\n        });\n      }\n    });\n  }\n  window.addEventListener('scroll', updateActiveNavLink, { passive: true });\n}\nfunction initDynamicWhatsApp() {\n  const waMainBtn = document.getElementById('waMainBtn');\n  const waPopupCard = document.getElementById('waPopupCard');\n  const waPopupCloseBtn = document.getElementById('waPopupCloseBtn');\n  const waChips = document.querySelectorAll('.js-wa-chip');\n  if (!waMainBtn || !waPopupCard) return;\n  let isDismissedByUser = false;\n  let reEngagementTimer = null;\n  setTimeout(() => {\n    if (!isDismissedByUser) showWaPopup();\n  }, 3200);\n  setInterval(() => {\n    waMainBtn.classList.add('is-wiggling');\n    setTimeout(() => { waMainBtn.classList.remove('is-wiggling'); }, 900);\n  }, 7000);\n  waMainBtn.addEventListener('click', () => {\n    if (waPopupCard.classList.contains('is-visible')) {\n      hideWaPopup();\n      isDismissedByUser = true;\n    } else {\n      showWaPopup();\n      isDismissedByUser = false;\n    }\n  });\n  if (waPopupCloseBtn) {\n    waPopupCloseBtn.addEventListener('click', (e) => {\n      e.stopPropagation();\n      hideWaPopup();\n      isDismissedByUser = true;\n      clearTimeout(reEngagementTimer);\n      reEngagementTimer = setTimeout(() => {\n        isDismissedByUser = false;\n        showWaPopup();\n        triggerAttentionBounce();\n      }, 16000);\n    });\n  }\n  waChips.forEach(chip => {\n    chip.addEventListener('click', () => {\n      const customMsg = chip.getAttribute('data-msg');\n      const url = `https://wa.me/923333001231?text=${encodeURIComponent(customMsg)}`;\n      window.open(url, '_blank');\n      hideWaPopup();\n    });\n  });\n  function showWaPopup() {\n    waPopupCard.classList.add('is-visible');\n    triggerAttentionBounce();\n  }\n  function hideWaPopup() {\n    waPopupCard.classList.remove('is-visible');\n  }\n  function triggerAttentionBounce() {\n    waMainBtn.classList.add('is-wiggling');\n    setTimeout(() => { waMainBtn.classList.remove('is-wiggling'); }, 900);\n  }\n  let scrollTriggerFired = false;\n  window.addEventListener('scroll', () => {\n    const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;\n    if (scrollPercent > 45 && !scrollTriggerFired) {\n      scrollTriggerFired = true;\n      if (!waPopupCard.classList.contains('is-visible')) showWaPopup();\n    }\n  }, { passive: true });\n}\n  </script>\n</body>\n</html>
