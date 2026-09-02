@@ -1,0 +1,13 @@
+{
+  "name": "architecture-interior-design",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Architecture & Interior Design in Karachi",
+  "scripts": {
+    "start": "node server.js",
+    "build": "echo 'Build complete'"
+  },
+  "keywords": [],
+  "author": "Architecture Interior Design",
+  "license": "ISC"
+}
